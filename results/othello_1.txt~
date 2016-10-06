@@ -1,0 +1,226 @@
+start = 2e-3
+if i > 10000:
+start = start / 2
+
+    #convolutional layers 
+    i = 28; o = 64;
+    conv1_weights = conv_weights(i, o)
+    conv1_biases = conv_biases(o)
+    conv1_out = conv_nonparams(img_data, conv1_weights, conv1_biases, keep_prob)
+    
+    i = o; o = 48;
+    conv2_weights = conv_weights(i, o)
+    conv2_biases = conv_biases(o)
+    conv2_out = conv_nonparams(conv1_out, conv2_weights, conv2_biases, keep_prob)
+    
+    i = o; o = 36;
+    conv3_weights = conv_weights(i, o)
+    conv3_biases = conv_biases(o)
+    conv3_out = conv_nonparams(conv2_out, conv3_weights, conv3_biases, keep_prob)
+    
+    i = o; o = 27;
+    conv4_weights = conv_weights(i, o)
+    conv4_biases = conv_biases(o)
+    conv4_out = conv_nonparams(conv3_out, conv4_weights, conv4_biases, keep_prob)
+    
+    #scoring layer
+    k = 1; i = o; o = 2;
+    score_weights = weight_variable([k, k, i, o])
+    score_biases = bias_variable([o])
+    score_out = conv_nonparams(conv4_out, score_weights, score_biases, keep_prob)
+
+start training
+starting error:52.259905599
+2016-10-03 21:50:26.569271: Step 100: Validation error = 10.9
+2016-10-03 21:51:56.605500: Step 200: Validation error = 7.7
+2016-10-03 21:53:27.760935: Step 300: Validation error = 6.1
+2016-10-03 21:54:59.868888: Step 400: Validation error = 5.7
+2016-10-03 21:56:30.907417: Step 500: Validation error = 5.1
+2016-10-03 21:57:59.382795: Step 600: Validation error = 4.8
+2016-10-03 21:59:26.206810: Step 700: Validation error = 4.6
+2016-10-03 22:00:55.665947: Step 800: Validation error = 4.5
+2016-10-03 22:02:21.949290: Step 900: Validation error = 4.4
+2016-10-03 22:03:48.073715: Step 1000: Validation error = 4.3
+2016-10-03 22:17:18.587891: Step 2000: Validation error = 3.9
+2016-10-03 22:30:57.208776: Step 3000: Validation error = 3.7
+2016-10-03 22:45:31.975309: Step 4000: Validation error = 3.6
+2016-10-03 23:00:34.428171: Step 5000: Validation error = 3.6
+2016-10-03 23:15:31.293860: Step 6000: Validation error = 3.5
+2016-10-03 23:30:38.654058: Step 7000: Validation error = 3.6
+2016-10-03 23:45:46.817224: Step 8000: Validation error = 3.6
+2016-10-04 00:00:49.570510: Step 9000: Validation error = 3.5
+2016-10-04 00:15:29.003680: Step 10000: Validation error = 3.6
+2016-10-04 00:30:15.252464: Step 11000: Validation error = 3.5
+2016-10-04 00:44:51.063506: Step 12000: Validation error = 3.4
+2016-10-04 00:59:13.411667: Step 13000: Validation error = 3.3
+2016-10-04 01:13:34.884924: Step 14000: Validation error = 3.5
+2016-10-04 01:27:49.810607: Step 15000: Validation error = 3.3
+2016-10-04 01:42:00.132855: Step 16000: Validation error = 3.3
+2016-10-04 01:56:09.859077: Step 17000: Validation error = 3.5
+2016-10-04 02:10:18.114213: Step 18000: Validation error = 3.4
+2016-10-04 02:24:20.008332: Step 19000: Validation error = 3.4
+2016-10-04 02:38:26.160054: Step 20000: Validation error = 3.4
+2016-10-04 02:52:43.322709: Step 21000: Validation error = 3.4
+2016-10-04 03:06:54.372808: Step 22000: Validation error = 3.5
+2016-10-04 03:20:55.174116: Step 23000: Validation error = 3.2
+2016-10-04 03:34:52.288400: Step 24000: Validation error = 3.4
+2016-10-04 03:48:55.497420: Step 25000: Validation error = 3.2
+2016-10-04 04:03:06.715509: Step 26000: Validation error = 3.4
+2016-10-04 04:17:08.861119: Step 27000: Validation error = 3.4
+2016-10-04 04:31:05.200684: Step 28000: Validation error = 3.2
+2016-10-04 04:45:12.453746: Step 29000: Validation error = 3.2
+2016-10-04 04:59:21.808323: Step 30000: Validation error = 3.3
+2016-10-04 05:13:23.309941: Step 31000: Validation error = 3.2
+2016-10-04 05:27:27.972968: Step 32000: Validation error = 3.4
+2016-10-04 05:41:42.561933: Step 33000: Validation error = 3.5
+2016-10-04 05:55:32.387154: Step 34000: Validation error = 3.3
+2016-10-04 06:09:29.174036: Step 35000: Validation error = 3.2
+2016-10-04 06:23:41.240235: Step 36000: Validation error = 3.3
+2016-10-04 06:37:56.755253: Step 37000: Validation error = 3.4
+2016-10-04 06:52:08.434747: Step 38000: Validation error = 3.2
+2016-10-04 07:06:20.076011: Step 39000: Validation error = 3.2
+
+othello_1_1 : 
+
+    start = 2e-3
+    if i > 10000:
+        start = start / 2
+    if i > 20000:
+        start = start / 2
+
+starting error:3.23520345052
+2016-10-04 08:26:43.414629: Step 40000: Validation error = 3.2
+2016-10-04 08:29:24.883357: Step 40200: Validation error = 3.1
+2016-10-04 08:32:21.197755: Step 40400: Validation error = 3.3
+2016-10-04 08:35:38.811676: Step 40600: Validation error = 3.2
+2016-10-04 08:38:35.929081: Step 40800: Validation error = 3.3
+2016-10-04 08:41:44.955277: Step 41000: Validation error = 3.2
+2016-10-04 08:45:08.279084: Step 41200: Validation error = 3.2
+2016-10-04 08:48:40.509073: Step 41400: Validation error = 3.2
+
+    start = 2e-3
+    if i > 10000:
+        start = start / 2
+    if i > 20000:
+        start = start / 1.5
+
+starting error:3.22360148112
+2016-10-04 09:09:04.047670: Step 41600: Validation error = 3.2
+2016-10-04 09:12:10.760141: Step 41800: Validation error = 3.2
+2016-10-04 09:14:56.933780: Step 42000: Validation error = 3.2
+2016-10-04 09:17:57.875501: Step 42200: Validation error = 3.2
+2016-10-04 09:21:08.761472: Step 42400: Validation error = 3.1
+2016-10-04 09:24:37.745249: Step 42600: Validation error = 3.4
+2016-10-04 09:27:42.737659: Step 42800: Validation error = 3.2
+2016-10-04 09:30:41.174506: Step 43000: Validation error = 3.2
+2016-10-04 09:33:40.129481: Step 43200: Validation error = 3.3
+2016-10-04 09:36:34.243563: Step 43400: Validation error = 3.2
+2016-10-04 09:39:20.576512: Step 43600: Validation error = 3.2
+2016-10-04 09:42:29.442389: Step 43800: Validation error = 3.2
+2016-10-04 09:45:40.284150: Step 44000: Validation error = 3.2
+2016-10-04 09:48:54.795852: Step 44200: Validation error = 3.2
+2016-10-04 09:52:05.525275: Step 44400: Validation error = 3.3
+2016-10-04 09:55:25.092992: Step 44600: Validation error = 3.2
+2016-10-04 09:58:42.182547: Step 44800: Validation error = 3.3
+2016-10-04 10:01:51.704680: Step 45000: Validation error = 3.3
+2016-10-04 11:34:52.431548: Step 45200: Validation error = 3.1
+2016-10-04 11:38:08.236085: Step 45400: Validation error = 3.3
+2016-10-04 11:41:03.739439: Step 45600: Validation error = 3.3
+2016-10-04 11:44:07.422190: Step 45800: Validation error = 3.3
+2016-10-04 11:47:27.309447: Step 46000: Validation error = 3.3
+2016-10-04 11:50:44.450584: Step 46200: Validation error = 3.3
+2016-10-04 11:54:09.514801: Step 46400: Validation error = 3.3
+2016-10-04 11:57:20.885984: Step 46600: Validation error = 3.2
+2016-10-04 12:00:25.922317: Step 46800: Validation error = 3.2
+2016-10-04 12:03:27.174356: Step 47000: Validation error = 3.1
+2016-10-04 12:07:11.952009: Step 47200: Validation error = 3.4
+2016-10-04 12:10:28.254302: Step 47400: Validation error = 3.2
+2016-10-04 12:13:56.116508: Step 47600: Validation error = 3.2
+2016-10-04 12:17:18.579578: Step 47800: Validation error = 3.2
+Correct guesses: 26.65 / 59.96
+
+Set keep_prob = 1 og held áfram að malla...
+    start = 2e-3
+    if i > 10000:
+        start = start / 2
+    if i > 20000:
+        start = start / 1.75
+
+start training
+2016-10-04 14:24:05.557206: Step 49500: Validation error = 3.3
+2016-10-04 14:31:24.320394: Step 50000: Validation error = 3.2
+2016-10-04 14:39:06.068267: Step 50500: Validation error = 3.0
+2016-10-04 14:47:11.739279: Step 51000: Validation error = 3.1
+2016-10-04 14:55:06.574159: Step 51500: Validation error = 3.0
+
+Avg. success: 27.7 with avg. length 59.96
+% Save-a þetta sem othello_1_1 og læt áframhaldandi þjálfun byrja í othello_1_2
+
+Þjálfaði í 1000 - 2000 fleiri iterations:
+
+Avg. success: 27.81 with avg. length 59.96
+
+117298
+start training
+starting error:2.99656778971
+2016-10-04 16:15:07.203418: Step 54000: Validation error = 3.000
+2016-10-04 16:18:19.984895: Step 54200: Validation error = 2.941
+2016-10-04 16:21:49.434768: Step 54400: Validation error = 3.025
+2016-10-04 16:25:05.298327: Step 54600: Validation error = 3.029
+2016-10-04 16:28:29.701600: Step 54800: Validation error = 3.081
+2016-10-04 16:31:53.768990: Step 54999: Validation error = 3.006
+2016-10-04 16:31:59.582698: Step 54999: Validation error = 3.006
+
+Avg. success: 27.99 with avg. length 59.96
+
+Reyni að fá betra en 0.2 aukningu per 1000 iterations: 
+
+    start = 2e-3
+    if i > 10000:
+        start = start / 2
+    if i > 20000:
+        start = start / 1.25
+
+
+117298
+start training
+starting error:3.00570821126
+2016-10-04 16:43:32.755178: Step 55200: Validation error = 2.999
+2016-10-04 16:47:07.174389: Step 55400: Validation error = 3.030
+2016-10-04 16:50:39.764060: Step 55600: Validation error = 2.991
+2016-10-04 16:54:06.177755: Step 55800: Validation error = 2.994
+2016-10-04 16:57:36.466793: Step 56000: Validation error = 2.991
+2016-10-04 16:57:43.136404: Step 56000: Validation error = 2.991
+done
+
+Avg. success: 28.17 with avg. length 59.96
+
+# Set í gang langa þjálfun sem hættir vonandi í 32 / 60
+
+starting error:2.99068155924
+2016-10-04 17:35:33.433062: Step 58000: Validation error = 2.960
+
+Avg. success: 28.28 with avg. length 59.96 
+
+    start = 2e-3
+    if i > 10000:
+        start = start / 2
+    if i > 20000:
+        start = start / 1.5
+
+starting error:2.96008524577
+2016-10-04 18:11:54.174417: Step 60000: Validation error = 3.004
+2016-10-04 18:49:53.354016: Step 62000: Validation error = 3.016
+
+Avg. success: 28.59 with avg. length 59.96
+
+starting error:3.01583679199
+2016-10-04 19:37:09.495327: Step 64000: Prediction accuracy = 0.471
+Versnun! Stoppa hér 
+
+UPDATE: 
+Actual error: 
+starting error:2.34874633789
+done
+Prediction accuracy: 0.847166666667
+

@@ -1,0 +1,89 @@
+start = 2e-3
+if i > 9000:
+start = start / 2
+if i > 14000:
+probs = 1
+if i > 18000:
+start = start / 2
+if i > 27000:
+start = start / 2
+
+    #convolutional layers 
+    i = 28; o = 64;
+    conv1_weights = conv_weights(i, o)
+    conv1_biases = conv_biases(o)
+    conv1_out = conv_nonparams(img_data, conv1_weights, conv1_biases, keep_prob)
+    
+    i = o; o = 64;
+    conv2_weights = conv_weights(i, o)
+    conv2_biases = conv_biases(o)			
+    conv2_out = conv_nonparams(conv1_out, conv2_weights, conv2_biases, keep_prob)
+    
+    i = o; o = 64;
+    conv3_weights = conv_weights(i, o)
+    conv3_biases = conv_biases(o)
+    conv3_out = conv_nonparams(conv2_out, conv3_weights, conv3_biases, keep_prob)
+    
+    i = o; o = 64;
+    conv4_weights = conv_weights(i, o)
+    conv4_biases = conv_biases(o)
+    conv4_out = conv_nonparams(conv3_out, conv4_weights, conv4_biases, keep_prob)
+    
+    i = o; o = 64;
+    conv5_weights = conv_weights(i, o)
+    conv5_biases = conv_biases(o)
+    conv5_out = conv_nonparams(conv4_out, conv4_weights, conv5_biases, keep_prob) <---- ÚPS!!!
+    
+
+start training
+starting error:183.869596354
+2016-10-04 20:59:16.695982: Step 0: Validation error = 44.12
+	2016-10-04 21:01:33.507583: Step 100: Validation error = 19.68
+2016-10-04 21:03:48.275129: Step 200: Validation error = 15.47
+2016-10-04 21:06:06.771226: Step 300: Validation error = 13.20
+2016-10-04 21:08:22.955291: Step 400: Validation error = 12.25
+2016-10-04 21:10:39.337495: Step 500: Validation error = 10.76
+2016-10-04 21:13:01.898299: Step 600: Validation error = 9.87
+2016-10-04 21:15:16.406759: Step 700: Validation error = 8.55
+2016-10-04 21:16:24.183674: Step 750: Validation error = 8.07
+2016-10-04 21:17:32.680429: Step 800: Validation error = 7.64
+2016-10-04 21:19:48.422054: Step 900: Validation error = 7.17
+2016-10-04 21:32:39.239920: Step 1500: Prediction accuracy = 0.27
+2016-10-04 21:49:33.775370: Step 2250: Validation error = 4.31
+2016-10-04 22:05:07.757097: Step 3000: Prediction accuracy = 0.35
+2016-10-04 22:21:37.178201: Step 3750: Validation error = 3.86
+2016-10-04 22:37:14.531827: Step 4500: Prediction accuracy = 0.36
+2016-10-04 22:53:37.795076: Step 5250: Validation error = 3.85
+2016-10-04 23:09:01.989460: Step 6000: Prediction accuracy = 0.36
+2016-10-04 23:25:16.699214: Step 6750: Validation error = 3.69
+2016-10-04 23:40:38.935589: Step 7500: Prediction accuracy = 0.37
+2016-10-04 23:56:51.759275: Step 8250: Validation error = 3.48
+2016-10-05 00:12:23.788951: Step 9000: Prediction accuracy = 0.38
+2016-10-05 00:28:47.333419: Step 9750: Validation error = 3.46
+2016-10-05 00:44:06.816262: Step 10500: Prediction accuracy = 0.39
+2016-10-05 01:00:28.509767: Step 11250: Validation error = 3.43
+2016-10-05 01:15:56.623559: Step 12000: Prediction accuracy = 0.39
+2016-10-05 01:32:12.932025: Step 12750: Validation error = 3.33
+2016-10-05 01:47:39.116500: Step 13500: Prediction accuracy = 0.40
+2016-10-05 02:04:02.682590: Step 14250: Validation error = 2.97
+2016-10-05 02:19:27.880095: Step 15000: Prediction accuracy = 0.41
+2016-10-05 02:36:03.803580: Step 15750: Validation error = 2.85
+2016-10-05 02:51:59.095317: Step 16500: Prediction accuracy = 0.45
+2016-10-05 03:08:31.720163: Step 17250: Validation error = 2.71
+2016-10-05 03:24:10.472960: Step 18000: Prediction accuracy = 0.45
+2016-10-05 03:40:32.946674: Step 18750: Validation error = 2.66
+2016-10-05 03:55:57.731560: Step 19500: Prediction accuracy = 0.47
+2016-10-05 04:12:21.943359: Step 20250: Validation error = 2.73
+2016-10-05 04:28:00.361481: Step 21000: Prediction accuracy = 0.48
+2016-10-05 04:44:28.103643: Step 21750: Validation error = 2.73
+2016-10-05 05:00:03.246488: Step 22500: Prediction accuracy = 0.47
+2016-10-05 05:16:34.743305: Step 23250: Validation error = 2.71
+2016-10-05 05:32:08.915054: Step 24000: Prediction accuracy = 0.48
+2016-10-05 05:48:25.616334: Step 24750: Validation error = 2.75
+2016-10-05 06:03:52.234894: Step 25500: Prediction accuracy = 0.49
+2016-10-05 06:20:21.199375: Step 26250: Validation error = 2.70
+2016-10-05 06:36:04.192926: Step 27000: Prediction accuracy = 0.48
+2016-10-05 06:52:36.262188: Step 27750: Validation error = 2.76
+2016-10-05 07:08:30.739969: Step 28500: Prediction accuracy = 0.49
+2016-10-05 07:45:09.973341: Step 29250: Validation error = 2.73
+

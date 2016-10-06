@@ -1,0 +1,77 @@
+    #a good early_epoch_start = 2e-3 
+    start = 3e-3
+    if i > 9000:
+        start = start / 2
+    if i > 14000:
+        probs = 1
+    if i > 18000:
+        start = start / 2
+    if i > 31000:
+        start = start / 2
+ #convolutional layers 
+#Estimation of parameters:
+(3*3*28)*32 + 32 = 8096
+(3*3*32)*32 + 32 = 9248
+SUM = 8096 + 5*9248 = 54336
+
+    i = 28; o = 32;
+    conv1_weights = conv_weights(i, o)
+    conv1_biases = conv_biases(o)
+    conv1_out = conv_nonparams(img_data, conv1_weights, conv1_biases, keep_prob)
+    
+    i = o; o = 32;
+    conv2_weights = conv_weights(i, o)
+    conv2_biases = conv_biases(o)
+    conv2_out = conv_nonparams(conv1_out, conv2_weights, conv2_biases, keep_prob)
+    
+    i = o; o = 32;
+    conv3_weights = conv_weights(i, o)
+    conv3_biases = conv_biases(o)
+    conv3_out = conv_nonparams(conv2_out, conv3_weights, conv3_biases, keep_prob)
+    
+    i = o; o = 32;
+    conv4_weights = conv_weights(i, o)
+    conv4_biases = conv_biases(o)
+    conv4_out = conv_nonparams(conv3_out, conv4_weights, conv4_biases, keep_prob)
+    
+    i = o; o = 32;
+    conv5_weights = conv_weights(i, o)
+    conv5_biases = conv_biases(o)
+    conv5_out = conv_nonparams(conv4_out, conv5_weights, conv5_biases, keep_prob)
+    
+    i = o; o = 32 ;
+    conv6_weights = conv_weights(i, o)
+    conv6_biases = conv_biases(o)
+    conv6_out = conv_nonparams(conv5_out, conv6_weights, conv6_biases, keep_prob)
+    
+    #scoring layer
+    k = 1; i = o; o = 2;
+    score_weights = weight_variable([k, k, i, o])
+    score_biases = bias_variable([o])
+    score_out = conv_nonparams(conv6_out, score_weights, score_biases, keep_prob)
+
+    
+
+117298
+start training
+starting error:47.40421875
+2016-10-06 10:17:04.554257: Step 0: Validation error = 37.141
+2016-10-06 10:17:55.310768: Step 100: Validation error = 9.28
+2016-10-06 10:18:44.171779: Step 200: Validation error = 8.42
+2016-10-06 10:19:32.588644: Step 300: Validation error = 7.21
+2016-10-06 10:20:20.387413: Step 400: Validation error = 6.19
+2016-10-06 10:21:07.719348: Step 500: Validation error = 5.76
+2016-10-06 10:21:54.542786: Step 600: Validation error = 5.59
+2016-10-06 10:22:47.166498: Step 700: Validation error = 5.17
+2016-10-06 10:23:16.548376: Step 750: Validation error = 4.896
+2016-10-06 10:23:46.540964: Step 800: Validation error = 4.66
+2016-10-06 10:24:33.804916: Step 900: Validation error = 4.52
+2016-10-06 10:28:18.383395: Step 1500: Prediction accuracy = 0.734
+2016-10-06 10:33:19.009394: Step 2250: Validation error = 3.639
+2016-10-06 10:37:56.436771: Step 3000: Prediction accuracy = 0.758
+2016-10-06 10:42:50.685811: Step 3750: Validation error = 3.732
+2016-10-06 10:47:32.762771: Step 4500: Prediction accuracy = 0.764
+2016-10-06 10:52:38.979723: Step 5250: Validation error = 3.893
+2016-10-06 10:57:24.213580: Step 6000: Prediction accuracy = 0.758
+you need to cache this bro
+
