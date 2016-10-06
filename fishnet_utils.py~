@@ -1,0 +1,207 @@
+import tensorflow as tf
+from math import ceil
+import numpy as np
+import glob
+from scipy.misc import imread
+import random as rd
+import itertools
+
+def prepare_train_batch(train_ids, batch_size, do_flips, do_rots, data_path):
+    input_batch = []
+    label_batch = []
+    N = len(train_ids)
+    for h in range(batch_size):
+        try:
+            j = rd.randint(0, N-1)
+            train_id = train_ids[j]
+            #XXX: Following line is "hardcoded" for first batch of crops
+            l = rd.randint(0, 125)
+            image = load_image(train_id.img)
+            ground_truth = load_image(train_id.truth, labels=True)
+            if do_flips:
+                image, ground_truth = flip_data(image, ground_truth)
+            if do_rots:
+                image, ground_truth = rotate_data(image, ground_truth)
+            input_batch.append(image)
+            label_batch.append(ground_truth)
+        except Exception,e:
+            print(str(e))
+            continue
+    return input_batch, label_batch
+
+def display_path(path):
+    train_x = zeros((1, 128, 128)).astype(float32)
+    xdim = train_x.shape[1:]
+    x_dummy = (np.random.random((1,)+ xdim)/255.).astype(float32)
+    i = x_dummy.copy()
+    i[0,:,:] = (imread(path, flatten=True)[:,:]).astype(float32)
+    plt.figure()
+    plt.imshow(i[0], cmap='Greys_r')
+    
+def display_data(img):
+    i = np.transpose(img)[0]
+    i = np.transpose(i)
+    plt.figure()
+    plt.imshow(i, cmap='Greys_r')
+            
+
+
+def load_image(path, labels=False):
+    i = (imread(path, flatten=True)[:,:]).astype(np.float32)
+    i = i-np.mean(i)
+    i = i/float(255)
+    i = [np.transpose(i)]
+    i = np.transpose(i)
+    if labels:
+        i[i > 0.5] = 1.0
+        i[i < 0.5] = 0.0
+        i = i.astype(int)
+    return i
+
+def load_unnormalized_image(path, labels=False):
+    i = (imread(path, flatten=True)[:,:]).astype(np.float32)
+    i = i/float(255)
+    i = [np.transpose(i)]
+    i = np.transpose(i)
+    if labels:
+        i[i > 0.5] = 1.0
+        i[i < 0.5] = 0.0
+        i = i.astype(int)
+    return i
+
+def get_new_ids(path):
+    image_paths = glob.glob(path + "/*scaledImg.tile.pgm")
+    truth_paths = glob.glob(path + "/*groundTruth.tile.pgm")
+    image_paths.sort()
+    truth_paths.sort()
+    out = []
+    for img,truth in itertools.izip(image_paths, truth_paths):
+        out.append(Tile(img, truth))
+    return out
+
+class Tile(object):
+    def __init__(self, img, truth):
+        self.img = img
+        self.truth = truth
+
+    def __str__(self):
+        print(self.img + ", " + self.truth)
+
+def rotate_data(image, ground_truth):
+    rot = rd.randint(0, 1)
+    if rot is 1:
+        image = np.rot90(image)
+        ground_truth = np.rot90(ground_truth)
+    return image, ground_truth
+
+def flip_data(image, ground_truth):
+    ud = rd.randint(0, 1)
+    if ud is 1:
+        image = np.flipud(image)
+        ground_truth = np.flipud(ground_truth)
+    lr = rd.randint(0, 1)
+    if lr is 1:
+        image = np.fliplr(image)
+        ground_truth = np.fliplr(ground_truth)
+    return image, ground_truth
+
+def schedule(start, iteration, change_rate):
+    eta = start
+    while iteration > 0:
+        iteration = iteration - change_rate
+        eta = eta / 3.0
+    return eta
+
+def conv(input, kernel, p="SAME"):
+    return tf.nn.conv2d(input, kernel, strides=[1, 1, 1, 1], padding=p)
+
+#TODO: Functions below is legacy, delete when no longer used
+def weight_variable(shape):
+    initial = tf.truncated_normal(shape, stddev=0.1)
+    return tf.Variable(initial)
+
+def bias_variable(shape):
+    initial = tf.constant(0.1, shape=shape)
+    return tf.Variable(initial)
+
+#XXX: Only use the following 2 variations in new model definitions
+def conv_weights(i, o):
+    k = 3
+    shape = [k, k, i, o]
+    initial = tf.truncated_normal(shape, stddev=0.1)
+    return tf.Variable(initial)
+
+def conv_biases(o):
+    shape = [o]
+    initial = tf.constant(0.1, shape=shape)
+    return tf.Variable(initial)
+
+def conv_nonparams(tensor_input, conv_weights, conv_biases, keep_prob):
+    conv_in = conv(tensor_input, conv_weights)
+    conv_relu = tf.nn.relu(conv_in + conv_biases)
+    conv_drop = tf.nn.dropout(conv_relu, keep_prob)
+    return conv_drop
+
+def maxpool(tensor_input):
+    k = 2; s = 2; p = 'VALID'
+    return tf.nn.max_pool(tensor_input, ksize=[1, k, k, 1], strides=[1, s, s, 1], padding=p)
+
+def softmax(tensor_input, o):
+    input_reshaped = tf.reshape(tensor_input, [-1, o])
+    predictions = tf.nn.softmax(input_reshaped)
+    predictions_reshaped = tf.reshape(predictions, [1, 128, 128, o])
+    return predictions_reshaped
+
+def conv_transpose_nonparams(tensor_input, weights, o, s, keep_prob):
+    upscore  = tf.nn.conv2d_transpose(tensor_input, weights,
+                                      tf.pack([tf.shape(tensor_input)[0], 128, 128, o]),
+                                           [1, s, s, 1], padding="VALID")
+    upscore_drop = tf.nn.dropout(upscore, keep_prob)
+    return upscore_drop
+
+def semantic_loss(logits, labels, o):
+    logits_reshaped = tf.reshape(logits, [-1, o])
+    labels_reshaped = tf.reshape(labels, [-1]) 
+    loss = tf.nn.sparse_softmax_cross_entropy_with_logits(logits_reshaped, labels_reshaped)
+    return loss
+
+def deconv_weight_variable(shape):
+    width = shape[0]
+    height = shape[1]
+    depth = shape[2]
+    f = ceil(width/2.0)
+    c = (2 * f - 1 - f % 2) / (2.0 * f)
+    bilinear = np.zeros([width, height])
+    for x in range(width):
+        for y in range(height):
+            value = (1 - abs(x / f - c)) * (1 - abs(y / f - c))
+            bilinear[x, y] = value
+    weights = np.zeros(shape)
+    for i in range(depth):
+        weights[:, :, i, i] = bilinear
+    init = tf.constant_initializer(value=weights,
+                                  dtype = tf.float32)
+    return tf.get_variable(name="up_filter", initializer=init,
+                           shape=weights.shape)
+
+def create_id_lists(path, validation_ratio, testing_ratio):
+    ids = get_ids(path)
+    #Uncomment line below for cross-validation purposes
+    #rd.shuffle(ids)
+    validation_index = int(len(ids) * validation_ratio)
+    testing_index = int(len(ids) * testing_ratio)
+
+    validation_ids = ids[:validation_index]
+    testing_ids = ids[validation_index:validation_index+testing_index]
+    training_ids = ids[validation_index+testing_index:]
+    return  training_ids, testing_ids, validation_ids
+
+def get_ids(path):
+    image_paths = glob.glob(path + "/*scaledImg.tile.pgm")
+    truth_paths = glob.glob(path + "/*groundTruth.tile.pgm")
+    image_paths.sort()
+    truth_paths.sort()
+    out = []
+    for img,truth in itertools.izip(image_paths, truth_paths):
+        out.append(Tile(img, truth))
+    return out
