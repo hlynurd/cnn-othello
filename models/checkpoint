@@ -1,2 +1,2 @@
-model_checkpoint_path: "othello_4.ckpt"
-all_model_checkpoint_paths: "othello_4.ckpt"
+model_checkpoint_path: "fast-net-2.ckpt"
+all_model_checkpoint_paths: "fast-net-2.ckpt"

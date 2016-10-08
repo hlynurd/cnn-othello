@@ -71,7 +71,7 @@ starting error:47.40421875
 2016-10-06 10:23:46.540964: Step 800: Validation error = 4.66
 2016-10-06 10:24:33.804916: Step 900: Validation error = 4.52
 2016-10-06 10:28:18.383395: Step 1500: Prediction accuracy = 0.734
-2016-10-06 10:33:19.009394: Step 2250: Validation error = 3.639
+2016-10-06 10:33:19.009394: Step 2250: Validation error = 3.639		
 2016-10-06 10:37:56.436771: Step 3000: Prediction accuracy = 0.758
 2016-10-06 10:42:50.685811: Step 3750: Validation error = 3.732
 2016-10-06 10:47:32.762771: Step 4500: Prediction accuracy = 0.764
@@ -79,3 +79,87 @@ starting error:47.40421875
 2016-10-06 10:57:24.213580: Step 6000: Prediction accuracy = 0.758
 you need to cache this bro
 
+
+starting error:3.41253483073
+2016-10-06 12:19:45.008815: Step 6000: Prediction accuracy = 0.758
+you need to cache this bro
+2016-10-06 12:28:03.424554: Step 6750: Validation error = 3.624
+2016-10-06 12:36:04.872620: Step 7500: Prediction accuracy = 0.771
+2016-10-06 12:45:20.062738: Step 8250: Validation error = 3.540
+2016-10-06 12:53:28.277106: Step 9000: Prediction accuracy = 0.753
+2016-10-06 13:02:21.333722: Step 9750: Validation error = 3.495
+2016-10-06 13:10:59.997507: Step 10500: Prediction accuracy = 0.787
+2016-10-06 13:19:13.476026: Step 11250: Validation error = 3.344
+2016-10-06 13:29:22.522413: Step 12000: Prediction accuracy = 0.761
+2016-10-06 13:39:11.077332: Step 12750: Validation error = 3.357
+2016-10-06 13:49:18.898869: Step 13500: Prediction accuracy = 0.795
+2016-10-06 13:59:36.786607: Step 14250: Validation error = 2.517
+2016-10-06 14:09:03.906039: Step 15000: Prediction accuracy = 0.810
+2016-10-06 14:20:11.214173: Step 15750: Validation error = 2.479
+2016-10-06 14:31:13.615820: Step 16500: Prediction accuracy = 0.842
+
+117298
+start training
+starting error:2.32302978516
+2016-10-06 22:09:35.374439: Step 16500: Prediction accuracy = 0.841
+2016-10-06 22:15:07.698664: Step 17250: Validation error = 2.296
+2016-10-06 22:21:19.524540: Step 18000: Prediction accuracy = 0.840
+2016-10-06 22:26:56.255193: Step 18750: Validation error = 2.259
+2016-10-06 22:32:46.844144: Step 19500: Prediction accuracy = 0.848
+2016-10-06 22:38:20.204092: Step 20250: Validation error = 2.318
+2016-10-06 22:44:26.251911: Step 21000: Prediction accuracy = 0.853
+2016-10-06 22:51:20.851113: Step 21750: Validation error = 2.292
+2016-10-06 22:57:53.445617: Step 22500: Prediction accuracy = 0.845
+2016-10-06 23:04:53.844497: Step 23250: Validation error = 2.255
+2016-10-06 23:11:53.818070: Step 24000: Prediction accuracy = 0.859
+2016-10-06 23:18:50.546771: Step 24750: Validation error = 2.229
+2016-10-06 23:25:26.543631: Step 25500: Prediction accuracy = 0.846
+2016-10-06 23:32:22.072012: Step 26250: Validation error = 2.214
+2016-10-06 23:38:53.963572: Step 27000: Prediction accuracy = 0.852
+2016-10-06 23:45:47.514209: Step 27750: Validation error = 2.202
+2016-10-06 23:52:42.082137: Step 28500: Prediction accuracy = 0.868
+2016-10-06 23:59:37.733585: Step 29250: Validation error = 2.292
+2016-10-07 00:06:05.855775: Step 30000: Prediction accuracy = 0.843
+2016-10-07 00:13:15.622695: Step 30750: Validation error = 2.319
+2016-10-07 00:19:46.972449: Step 31500: Prediction accuracy = 0.838
+2016-10-07 00:26:35.627777: Step 32250: Validation error = 2.192
+2016-10-07 00:33:08.923741: Step 33000: Prediction accuracy = 0.849
+2016-10-07 00:40:06.116133: Step 33750: Validation error = 2.182
+2016-10-07 00:46:31.015688: Step 34500: Prediction accuracy = 0.858
+2016-10-07 00:53:21.374605: Step 35250: Validation error = 2.173
+2016-10-07 00:59:41.969942: Step 36000: Prediction accuracy = 0.854
+2016-10-07 01:06:27.540235: Step 36750: Validation error = 2.173
+2016-10-07 01:12:53.186900: Step 37500: Prediction accuracy = 0.849
+2016-10-07 01:19:38.534877: Step 38250: Validation error = 2.179
+2016-10-07 01:26:03.804053: Step 39000: Prediction accuracy = 0.854
+2016-10-07 01:32:49.926693: Step 39750: Validation error = 2.178
+2016-10-07 01:39:16.176087: Step 40500: Prediction accuracy = 0.850
+2016-10-07 01:46:03.584583: Step 41250: Validation error = 2.170
+2016-10-07 01:52:26.221008: Step 42000: Prediction accuracy = 0.854
+2016-10-07 01:59:18.210037: Step 42750: Validation error = 2.165
+2016-10-07 02:05:45.721832: Step 43500: Prediction accuracy = 0.856
+2016-10-07 02:12:40.462238: Step 44250: Validation error = 2.160
+2016-10-07 02:19:07.790811: Step 45000: Prediction accuracy = 0.862
+2016-10-07 02:25:53.130477: Step 45750: Validation error = 2.145
+2016-10-07 02:32:16.689468: Step 46500: Prediction accuracy = 0.858
+2016-10-07 02:39:09.418485: Step 47250: Validation error = 2.187
+2016-10-07 02:45:32.464237: Step 48000: Prediction accuracy = 0.845
+2016-10-07 02:52:18.970008: Step 48750: Validation error = 2.155
+2016-10-07 02:58:44.711181: Step 49500: Prediction accuracy = 0.856
+2016-10-07 03:05:31.684985: Step 50250: Validation error = 2.150
+2016-10-07 03:12:00.916630: Step 51000: Prediction accuracy = 0.855
+2016-10-07 03:18:50.804180: Step 51750: Validation error = 2.141
+2016-10-07 03:25:16.953572: Step 52500: Prediction accuracy = 0.854
+2016-10-07 03:32:05.298959: Step 53250: Validation error = 2.185
+2016-10-07 03:38:34.736763: Step 54000: Prediction accuracy = 0.855
+2016-10-07 03:45:28.736773: Step 54750: Validation error = 2.134
+2016-10-07 03:51:56.084892: Step 55500: Prediction accuracy = 0.860
+2016-10-07 03:58:43.195537: Step 56250: Validation error = 2.124
+2016-10-07 04:05:13.039339: Step 57000: Prediction accuracy = 0.852
+2016-10-07 04:12:01.597631: Step 57750: Validation error = 2.132
+2016-10-07 04:18:27.528995: Step 58500: Prediction accuracy = 0.856
+2016-10-07 04:25:17.182581: Step 59250: Validation error = 2.121
+2016-10-07 04:31:46.362679: Step 60000: Prediction accuracy = 0.847
+2016-10-07 04:38:38.317479: Step 60750: Validation error = 2.155
+you need to cache this bro: cache/training/features/features_61403_85.npy
+2016-10-07 04:45:09.681231: Step 61500: Prediction accuracy = 0.846

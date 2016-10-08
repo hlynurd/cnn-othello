@@ -66,21 +66,22 @@ def create_othello_net():
     conv4_biases = conv_biases(o)
     conv4_out = conv_nonparams(conv3_out, conv4_weights, conv4_biases, keep_prob)
     
-    i = o; o = 32;
-    conv5_weights = conv_weights(i, o)
-    conv5_biases = conv_biases(o)
-    conv5_out = conv_nonparams(conv4_out, conv5_weights, conv5_biases, keep_prob)
+    #i = o; o = 32;
+    #conv5_weights = conv_weights(i, o)
+    #conv5_biases = conv_biases(o)
+    #conv5_out = conv_nonparams(conv4_out, conv5_weights, conv5_biases, keep_prob)
     
-    i = o; o = 32 ;
-    conv6_weights = conv_weights(i, o)
-    conv6_biases = conv_biases(o)
-    conv6_out = conv_nonparams(conv5_out, conv6_weights, conv6_biases, keep_prob)
+    #i = o; o = 32 ;
+    #conv6_weights = conv_weights(i, o)
+    #conv6_biases = conv_biases(o)
+    #conv6_out = conv_nonparams(conv5_out, conv6_weights, conv6_biases, keep_prob)
     
     #scoring layer
     k = 1; i = o; o = 2;
     score_weights = weight_variable([k, k, i, o])
     score_biases = bias_variable([o])
-    score_out = conv_nonparams(conv6_out, score_weights, score_biases, keep_prob)
+    score_out = conv_nonparams(conv4_out, score_weights, score_biases, keep_prob)
+
 
     #final layer
     predictions = softmax(score_out, o)
