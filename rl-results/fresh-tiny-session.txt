@@ -1,0 +1,76 @@
+
+        eta = 1e-4,
+        discount_factor=1
+
+        if n > 500:
+            if temp_reset:
+                avg_vector_1 = []
+                avg_vector_2 = []
+                temp_reset = False
+            rl_reinforce.updateModel()
+            if n % 50 is 0:
+                save_path = saver_1.save(sess_1, model_1)
+
+starting self play
+10. Oct 13:02:50, Step 100: first = 28, second = 67
+10. Oct 13:02:51, Step 100: first total winrate = 0.28, second total winrate = 0.67
+10. Oct 13:04:19, Step 200: first = 46, second = 51
+10. Oct 13:04:19, Step 200: first total winrate = 0.37, second total winrate = 0.59
+10. Oct 13:05:52, Step 300: first = 43, second = 54
+10. Oct 13:05:52, Step 300: first total winrate = 0.39, second total winrate = 0.57
+10. Oct 13:07:51, Step 400: first = 46, second = 53
+10. Oct 13:07:52, Step 400: first total winrate = 0.41, second total winrate = 0.56
+10. Oct 13:09:21, Step 500: first = 36, second = 59
+10. Oct 13:09:22, Step 500: first total winrate = 0.40, second total winrate = 0.57
+10. Oct 13:10:48, Step 600: first = 55, second = 44
+10. Oct 13:10:48, Step 600: first total winrate = 0.55, second total winrate = 0.44
+10. Oct 13:12:14, Step 700: first = 54, second = 42
+10. Oct 13:12:15, Step 700: first total winrate = 0.55, second total winrate = 0.43
+10. Oct 13:13:39, Step 800: first = 48, second = 51
+10. Oct 13:13:40, Step 800: first total winrate = 0.52, second total winrate = 0.46
+10. Oct 13:15:10, Step 900: first = 48, second = 49
+10. Oct 13:15:11, Step 900: first total winrate = 0.51, second total winrate = 0.47
+10. Oct 13:16:42, Step 1000: first = 45, second = 52
+10. Oct 13:16:43, Step 1000: first total winrate = 0.50, second total winrate = 0.48
+10. Oct 13:18:12, Step 1100: first = 44, second = 51
+10. Oct 13:18:12, Step 1100: first total winrate = 0.49, second total winrate = 0.48
+
+Fresh network with 
+117298
+start training
+10. Oct 13:22:43, Step 0, loss_1 = 22.647, loss_2 = 21.419
+10. Oct 13:23:22, Step 100, loss_1 = 2.649, loss_2 = 2.691
+10. Oct 13:24:05, Step 200, loss_1 = 2.534, loss_2 = 2.563
+10. Oct 13:24:51, Step 300, loss_1 = 2.437, loss_2 = 2.446
+
+
+starting self play
+10. Oct 13:29:35, Step 100: first = 38, second = 55
+10. Oct 13:29:36, Step 100: first total winrate = 0.38, second total winrate = 0.55
+10. Oct 13:31:28, Step 200: first = 33, second = 63
+10. Oct 13:31:29, Step 200: first total winrate = 0.35, second total winrate = 0.59
+10. Oct 13:33:08, Step 300: first = 42, second = 51
+10. Oct 13:33:09, Step 300: first total winrate = 0.38, second total winrate = 0.56
+10. Oct 13:34:35, Step 400: first = 48, second = 48
+10. Oct 13:34:36, Step 400: first total winrate = 0.40, second total winrate = 0.54
+10. Oct 13:36:02, Step 500: first = 43, second = 56
+10. Oct 13:36:04, Step 500: first total winrate = 0.41, second total winrate = 0.55
+10. Oct 13:37:36, Step 600: first = 51, second = 47
+10. Oct 13:37:37, Step 600: first total winrate = 0.51, second total winrate = 0.47
+10. Oct 13:39:07, Step 700: first = 57, second = 40
+10. Oct 13:39:08, Step 700: first total winrate = 0.54, second total winrate = 0.43
+10. Oct 13:40:42, Step 800: first = 38, second = 58
+10. Oct 13:40:43, Step 800: first total winrate = 0.49, second total winrate = 0.48
+10. Oct 13:42:31, Step 900: first = 47, second = 51
+10. Oct 13:42:32, Step 900: first total winrate = 0.48, second total winrate = 0.49
+10. Oct 13:44:12, Step 1000: first = 48, second = 49
+10. Oct 13:44:13, Step 1000: first total winrate = 0.48, second total winrate = 0.49
+10. Oct 13:45:36, Step 1100: first = 46, second = 52
+10. Oct 13:45:37, Step 1100: first total winrate = 0.48, second total winrate = 0.49
+10. Oct 13:46:55, Step 1200: first = 43, second = 55
+10. Oct 13:46:56, Step 1200: first total winrate = 0.47, second total winrate = 0.50
+10. Oct 13:48:18, Step 1300: first = 51, second = 46
+10. Oct 13:48:19, Step 1300: first total winrate = 0.48, second total winrate = 0.50
+
+
+

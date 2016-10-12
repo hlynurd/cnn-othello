@@ -1,0 +1,78 @@
+    #a good early_epoch_start = 2e-3 
+    start = 3e-3
+    if i > 9000:
+        start = start / 2
+    if i > 14000:
+        probs = 1
+    if i > 18000:
+        start = start / 2
+    if i > 31000:
+        start = start / 2
+
+#Estimation of parameters:
+(3*3*28)*32 + 32 = 8096
+(3*3*32)*32 + 32 = 9248
+(3*3*32)*32 + 32 = 9248
+(3*3*32)*32 + 32 = 9248
+
+SUM = 8096 + 3*9248 = 45088 - 9248
+
+    #convolutional layers 
+    i = 28; o = 32;
+    conv1_weights = conv_weights(i, o)
+    conv1_biases = conv_biases(o)
+    conv1_out = conv_nonparams(img_data, conv1_weights, conv1_biases, keep_prob)
+    
+    i = o; o = 32;
+    conv2_weights = conv_weights(i, o)
+    conv2_biases = conv_biases(o)
+    conv2_out = conv_nonparams(conv1_out, conv2_weights, conv2_biases, keep_prob)
+    
+    i = o; o = 32;
+    conv3_weights = conv_weights(i, o)
+    conv3_biases = conv_biases(o)
+    conv3_out = conv_nonparams(conv2_out, conv3_weights, conv3_biases, keep_prob)
+    
+    i = o; o = 32;
+    conv4_weights = conv_weights(i, o)
+    conv4_biases = conv_biases(o)
+    conv4_out = conv_nonparams(conv3_out, conv4_weights, conv4_biases, keep_prob)
+    
+    #scoring layer
+    k = 1; i = o; o = 2;
+    score_weights = weight_variable([k, k, i, o])
+    score_biases = bias_variable([o])
+    score_out = conv_nonparams(conv4_out, score_weights, score_biases, keep_prob)
+
+117298
+start training
+starting error:43.2932447917
+
+2016-10-08 08:35:39.513799: Step 60000: Prediction accuracy = 0.780
+
+plateauar hér mjög snemma
+crashaði út af npio load error
+prófa aftur með try catch og lægra learning ratei
+
+    start = 5e-4
+    eta = start
+
+117298
+start training
+starting error:33.3772445519
+2016-10-08 08:42:11.320493: Step 0: Validation error = 32.367
+2016-10-08 08:45:04.737806: Step 500: Validation error = 6.48
+2016-10-08 08:45:36.158994: Step 500: Prediction accuracy = 0.535
+2016-10-08 08:54:29.790871: Step 2000: Validation error = 4.239
+2016-10-08 09:04:50.750150: Step 4000: Prediction accuracy = 0.768
+2016-10-08 09:15:53.839680: Step 6000: Validation error = 3.422
+2016-10-08 09:26:09.717145: Step 8000: Prediction accuracy = 0.786
+2016-10-08 09:37:21.362877: Step 10000: Validation error = 3.286
+2016-10-08 09:47:45.200950: Step 12000: Prediction accuracy = 0.804
+2016-10-08 09:58:35.214883: Step 14000: Validation error = 3.339
+2016-10-08 10:08:41.132812: Step 16000: Prediction accuracy = 0.826
+2016-10-08 10:19:28.697306: Step 18000: Validation error = 3.144
+2016-10-08 10:30:40.310436: Step 20000: Prediction accuracy = 0.819
+
+    Hér læt ég vinnutölvuna cache-a  gögnin. Færi svo supervised learning partinn á hana
+

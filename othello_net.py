@@ -43,7 +43,7 @@ def semantic_loss(logits, labels, o):
 
 def create_othello_net():
     img_data = tf.placeholder(tf.float32, shape=[None, 8, 8, 28], name="img_data")
-    keep_prob = tf.placeholder(tf.float32)
+    keep_prob = tf.placeholder(tf.float32, name="keep_prob")
     
     #convolutional layers 
     i = 28; o = 32;
@@ -61,10 +61,11 @@ def create_othello_net():
     conv3_biases = conv_biases(o)
     conv3_out = conv_nonparams(conv2_out, conv3_weights, conv3_biases, keep_prob)
     
-    i = o; o = 32;
-    conv4_weights = conv_weights(i, o)
-    conv4_biases = conv_biases(o)
-    conv4_out = conv_nonparams(conv3_out, conv4_weights, conv4_biases, keep_prob)
+    #i = o; o = 32;
+    #conv4_weights = conv_weights(i, o)
+    #conv4_biases = conv_biases(o)
+    #conv4_out = conv_nonparams(conv3_out, conv4_weights, conv4_biases, keep_prob)
+    #XXX: Use conv4_out into score_out for fast-net
     
     #i = o; o = 32;
     #conv5_weights = conv_weights(i, o)
@@ -80,7 +81,7 @@ def create_othello_net():
     k = 1; i = o; o = 2;
     score_weights = weight_variable([k, k, i, o])
     score_biases = bias_variable([o])
-    score_out = conv_nonparams(conv4_out, score_weights, score_biases, keep_prob)
+    score_out = conv_nonparams(conv3_out, score_weights, score_biases, keep_prob)
 
 
     #final layer
@@ -88,13 +89,14 @@ def create_othello_net():
 
     #training block:
     labels = tf.placeholder(tf.int64, shape=[None, 8, 8, 1], name="ground_truths")
-    learn_rate = tf.placeholder(tf.float32)
+    learn_rate = tf.placeholder(tf.float32, name="eta")
     
     
     loss = semantic_loss(score_out, labels, o)    
-    train_step = tf.train.AdamOptimizer(learn_rate).minimize(loss)
+    optimizer = tf.train.AdamOptimizer(learn_rate)
+    train_step = optimizer.minimize(loss)
     
     sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
     
-    return sess.graph, img_data, train_step, labels, loss, predictions, keep_prob, learn_rate, score_out
+    return sess.graph, img_data, train_step, optimizer, labels, loss, predictions, keep_prob, learn_rate, score_out
     

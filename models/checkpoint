@@ -1,2 +1,2 @@
-model_checkpoint_path: "fast-net-2.ckpt"
-all_model_checkpoint_paths: "fast-net-2.ckpt"
+model_checkpoint_path: "tiny-selfplay-1-1.ckpt"
+all_model_checkpoint_paths: "tiny-selfplay-1-1.ckpt"

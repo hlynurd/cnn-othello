@@ -1,0 +1,58 @@
+m/n:
+
+            if winner is -1:
+                reward = 1 if j% 2 is 0 else -0.5
+            else:
+                reward = -0.5 if j% 2 is 0 else 1
+
+                     eta = 2e-4,
+                     discount_factor=1
+
+117298
+start training
+10. Oct 22:14:27, Step 0, loss_1 = 43.841, loss_2 = 37.590
+10. Oct 22:15:07, Step 100, loss_1 = 3.022, loss_2 = 2.948
+10. Oct 22:15:51, Step 200, loss_1 = 2.693, loss_2 = 2.603
+10. Oct 22:16:35, Step 299, loss_1 = 2.538, loss_2 = 2.491
+
+XXX: only bullcrap RL
+
+117298
+start training
+10. Oct 22:14:27, Step 0, loss_1 = 43.841, loss_2 = 37.590
+10. Oct 22:15:07, Step 100, loss_1 = 3.022, loss_2 = 2.948
+10. Oct 22:15:51, Step 200, loss_1 = 2.693, loss_2 = 2.603
+10. Oct 22:16:35, Step 299, loss_1 = 2.538, loss_2 = 2.491
+
+i/p-j: 
+
+            if winner is -1:
+                reward = 1 if j% 2 is 0 else -0.1
+            else:
+                reward = -0.1 if j% 2 is 0 else 1
+
+                     eta = 2e-4,
+                     discount_factor=1	
+
+117298
+start training
+10. Oct 22:14:27, Step 0, loss_1 = 43.841, loss_2 = 37.590
+10. Oct 22:15:07, Step 100, loss_1 = 3.022, loss_2 = 2.948
+10. Oct 22:15:51, Step 200, loss_1 = 2.693, loss_2 = 2.603
+10. Oct 22:16:35, Step 299, loss_1 = 2.538, loss_2 = 2.491
+
+starting self play
+11. 09:06:23, Step 100: first = 47, second = 48
+11. 09:08:22, Step 200: first = 41, second = 57
+11. 09:10:33, Step 300: first = 33, second = 63
+11. 09:12:51, Step 400: first = 39, second = 60
+11. 09:15:49, Step 500: first = 37, second = 63
+11. 09:15:55, Results before learning : first wr = 0.39, second wr = 0.58
+s
+11. 09:23:58, Step 600: first = 50, second = 42
+11. 09:28:09, Step 700: first = 53, second = 40
+11. 09:32:04, Step 800: first = 57, second = 39
+11. 09:36:02, Step 900: first = 57, second = 42
+11. 09:40:01, Step 1000: first = 59, second = 39
+11. 09:40:05, Results after learning : first wr = 0.55, second wr = 0.40
+

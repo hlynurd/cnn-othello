@@ -1,0 +1,2 @@
+model_checkpoint_path: "tryagain24.ckpt"
+all_model_checkpoint_paths: "tryagain24.ckpt"

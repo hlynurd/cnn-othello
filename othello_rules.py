@@ -9,7 +9,13 @@ def initialize_game():
     board[4][4] = 1
     return board
 
-def make_move(board, move, player):
+def make_move(board, move, player, debug = False):
+    if debug:
+        if(len(find_legal_moves(board, player))) < 1:
+            print("error illegal move")
+            print(board)
+            print(move)
+            print(player)
     private_board = np.array(board)
     move = str(move)
     row = int(move[0]) - 1
