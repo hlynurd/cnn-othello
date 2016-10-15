@@ -1,2 +1,2 @@
-model_checkpoint_path: "tryagain24.ckpt"
-all_model_checkpoint_paths: "tryagain24.ckpt"
+model_checkpoint_path: "players_g.ckpt.b"
+all_model_checkpoint_paths: "players_g.ckpt.b"
