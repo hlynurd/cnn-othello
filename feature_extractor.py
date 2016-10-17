@@ -77,6 +77,7 @@ def filled_rows(board):
         for j in range(8):
             if board[i][j] == 0:
                 rows[i] = 0
+                break
     return rows
 
 def get_filled_row_features(rows):
@@ -85,6 +86,8 @@ def get_filled_row_features(rows):
         for j in range(8):
             if rows[i] == 1:
                 board[i][j] = 1
+            else:
+                break
     return board
 
 # Returns vector [v0, v1, ..., v7]
@@ -104,6 +107,7 @@ def filled_columns(board):
         for i in range(8):
             if board[i][j] == 0:
                 columns[j] = 0
+                break
     return columns
 
 def get_filled_column_features(columns):
@@ -112,6 +116,8 @@ def get_filled_column_features(columns):
         for i in range(8):
             if columns[j] == 1:
                 board[i][j] = 1
+            else:
+                break
     return board
 
 # Returns vector [v_a, v_b, ..., v_o]
@@ -133,6 +139,7 @@ def filled_NE(board):
         while True:
             if board[i][j] == 0:
                 diags_NE[row] = 0
+                break
             if j == 0:
                 break
             j -= 1
@@ -143,6 +150,7 @@ def filled_NE(board):
         while True:
             if board[i][j] == 0:
                 diags_NE[(column+7)] = 0
+                break
             if j == 7:
                 break
             i -= 1
@@ -157,6 +165,8 @@ def get_filled_NE_features(diags_NE):
         while True:
             if diags_NE[row] == 1:
                 board[i][j] = 1
+            else:
+                break
             if j == 0:
                 break
             j -= 1
@@ -167,6 +177,8 @@ def get_filled_NE_features(diags_NE):
         while True:
             if diags_NE[column+7] == 1:
                 board[i][j] = 1
+            else:
+                break
             if j == 7:
                 break
             i -= 1
@@ -194,6 +206,7 @@ def filled_NW(board):
         while True:
             if board[i][j] == 0:
                 diags_NW[cnt] = 0
+                break
             if j == 7:
                 break
             j += 1
@@ -205,6 +218,7 @@ def filled_NW(board):
         while True:
             if board[i][j] == 0:
                 diags_NW[row+7] = 0
+                break
             if i == 7:
                 break
             j += 1
@@ -220,6 +234,8 @@ def get_filled_NW_features(diags_NW):
         while True:
             if diags_NW[cnt] == 1:
                 board[i][j] = 1
+            else:
+                break
             if j == 7:
                 break
             j += 1
@@ -231,6 +247,8 @@ def get_filled_NW_features(diags_NW):
         while True:
             if diags_NW[row+7] == 1:
                 board[i][j] = 1
+            else:
+                break
             if i == 7:
                 break
             j += 1
