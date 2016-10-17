@@ -5,6 +5,109 @@ from struct import *
 from feature_extractor import *
 from othello_rules import *
 import os
+
+def prep_and_append_training_batch(step, action_batch, action, features_batch, state, player):
+        feature_path = 'cache/training/features/features_' + str(step) + "_" + str(action) + ".npy"
+        label_path = 'cache/training/labels/labels_' + str(step) + "_" + str(action) + ".npy"
+        if os.path.isfile(feature_path) and os.path.isfile(label_path):
+            try:
+                features = np.load(feature_path)
+                label = np.load(label_path)
+            except:
+                print("data corruption in match " + str(i))
+                features = board_to_input(state, player)
+                label = prepare_data(move_to_label(action))
+        else:
+            features = board_to_input(state, player)
+            label = prepare_data(move_to_label(action))
+        features_batch.append(features)
+        action_batch.append(label)
+        # Now we add 3 reflections of the game state
+        # which is done by flipping the board over one diagonal        
+        move_upright = flip_move_upright(action)
+        features_upright = flip_features(features, 'upright')
+        features_batch.append(features_upright)
+        action_batch.append(prepare_data(move_to_label(move_upright)))
+        
+        # Then the other diagonal
+        move_upleft = flip_move_upleft(action)
+        features_upleft = flip_features(features, 'upleft')
+        features_batch.append(features_upleft)
+        action_batch.append(prepare_data(move_to_label(move_upleft)))
+        
+        # Then both diagonals
+        move_both = flip_move_upright(flip_move_upleft(action))
+        features_both = flip_features(features, 'both')
+        features_batch.append(features_both)
+        action_batch.append(prepare_data(move_to_label(move_both)))
+        return features_batch, action_batch
+
+def policy_loss(data_path, test_sess, test_features, test_actions, test_keep, test_loss, test_pred, games=10):
+    errors = []
+    validation_matches = get_all_matches(data_path)
+    #XXX: Delete this line when testing is faster
+    validation_matches = validation_matches[0:games]
+    successes = []
+    for i in range(len(validation_matches)):
+        match = validation_matches[i]
+        raw_match_movelist = match[8:]
+        unpacked_movelist = unpack('b'*60, raw_match_movelist)
+        board = initialize_game()
+        player = -1
+        success = 0
+        for move in unpacked_movelist:
+            if move == 0:
+                break
+            feature_path = 'cache/validation/features/features_' + str(i) + "_" + str(move) + ".npy"
+            label_path = 'cache/validation/labels/labels_' + str(i) + "_" + str(move) + ".npy"
+            if os.path.isfile(feature_path) and os.path.isfile(label_path):
+                features = np.load(feature_path)
+                label = np.load(label_path)
+            else:
+                features = board_to_input(board, player)
+                label = prepare_data(move_to_label(move))
+                
+            input_batch = [features]
+            label_batch = [label]
+            error = test_sess.run(test_loss, feed_dict={test_features:input_batch, test_actions: label_batch, test_keep:1.0})
+            errors.append(error)
+            prediction = test_sess.run(test_pred, feed_dict={test_features:input_batch, test_actions: label_batch, test_keep:1.0})
+            prediction = np.transpose(prediction[0])
+            prediction = np.transpose(prediction[1])
+            legal_moves = find_legal_moves(board, player)
+            cleaned_predictions = zero_illegal_moves(prediction, legal_moves)
+            i,j = np.unravel_index(cleaned_predictions.argmax(), cleaned_predictions.shape)
+            move_argmax = str((i+1) * 10 + (j+1))
+            if str(move) == str(move_argmax):
+                success += 1
+            original_board = np.array(board)
+            board_upright = np.transpose(original_board)
+            board_upleft = np.rot90(np.rot90(board_upright))
+            board_both_flips = np.transpose(board_upleft)
+            if np.array_equal(board, board_upright):
+                if str(move_argmax) == flip_move_upright(move):
+                    success += 1
+            if np.array_equal(board, board_upleft):
+                if str(move_argmax) == flip_move_upleft(move):
+                    success += 1
+            if np.array_equal(board, board_both_flips):
+                if str(move_argmax) == flip_move_upright(flip_move_upleft(move)):
+                    success += 1
+            board = make_move(board, move, player)
+            if player is 1:
+                player = -1
+            else:
+                player = 1
+            legal_moves = find_legal_moves(board, player)
+            if len(legal_moves) == 0:
+                if player is 1:
+                    player = -1
+                else:
+                    player = 1
+        successes.append(success)
+    return np.sum(errors) / len(errors), (np.mean(successes) / float(60))
+
+
 def get_all_matches(data_root):
     matches = []
     for fname in os.listdir(data_root):
