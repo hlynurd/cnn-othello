@@ -76,8 +76,8 @@ def policy_loss(data_path, test_sess, test_features, test_actions, test_keep, te
             prediction = np.transpose(prediction[1])
             legal_moves = find_legal_moves(board, player)
             cleaned_predictions = zero_illegal_moves(prediction, legal_moves)
-            i,j = np.unravel_index(cleaned_predictions.argmax(), cleaned_predictions.shape)
-            move_argmax = str((i+1) * 10 + (j+1))
+            unravel_i,unravel_j = np.unravel_index(cleaned_predictions.argmax(), cleaned_predictions.shape)
+            move_argmax = str((unravel_i+1) * 10 + (unravel_j+1))
             if str(move) == str(move_argmax):
                 success += 1
             original_board = np.array(board)

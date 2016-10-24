@@ -1,2 +1,2 @@
-model_checkpoint_path: "players_g.ckpt.b"
-all_model_checkpoint_paths: "players_g.ckpt.b"
+model_checkpoint_path: "players_g.ckpt.b.b"
+all_model_checkpoint_paths: "players_g.ckpt.b.b"

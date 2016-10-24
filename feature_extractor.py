@@ -7,7 +7,7 @@ from othello_rules import *
 from collections import deque
 def opponent_mobility_after_move(board, move, player):
     #print("working")
-    board = make_move(board, 56, player)
+    board = make_move(board, move, player)
     return len(find_legal_moves(board, player * (-1)))
 
 
@@ -525,13 +525,8 @@ def board_to_input(board, player):
     
     
 
-    return np.concatenate((player_grid[:,:,None], opponent_grid[:,:,None], empties[:,:,None],
-                           player_constant[:,:,None], zeros[:,:,None], legal_move_grid[:,:,None],
-                          corners[:,:,None], x_squares[:,:,None], c_grid[:,:,None],
-                          ones[:,:,None], mobility[:,:,None], edges_a[:,:,None], edges_b[:,:,None],
-                          sum_player_stability[:,:,None], sum_opponent_stability[:,:,None],
-                          current_stability[:,:,None], frontier[:,:,None], coin_parity[:,:,None],
-                          main_diagonal_1[:,:,None], main_diagonal_2[:,:,None], corner_2x4_1[:,:,None],
-                          corner_2x4_2[:,:,None], corner_2x4_3[:,:,None], corner_2x4_4[:,:,None],
-                          corner_2x4_5[:,:,None], corner_2x4_6[:,:,None], corner_2x4_7[:,:,None],
-                          corner_2x4_8[:,:,None]), axis=2)
+    return np.dstack((player_grid, opponent_grid, empties, player_constant, zeros, legal_move_grid,
+                          corners, x_squares, c_grid, ones, mobility, edges_a, edges_b,
+                          sum_player_stability, sum_opponent_stability, current_stability, frontier, coin_parity,
+                          main_diagonal_1, main_diagonal_2, corner_2x4_1, corner_2x4_2, corner_2x4_3, corner_2x4_4,
+                          corner_2x4_5, corner_2x4_6, corner_2x4_7, corner_2x4_8))
