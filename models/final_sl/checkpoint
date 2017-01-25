@@ -1,2 +1,2 @@
-model_checkpoint_path: "layers_7x64.ckpt"
-all_model_checkpoint_paths: "layers_7x64.ckpt"
+model_checkpoint_path: "norm_layers_7x64.ckpt"
+all_model_checkpoint_paths: "norm_layers_7x64.ckpt"

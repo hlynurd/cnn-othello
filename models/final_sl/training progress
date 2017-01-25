@@ -502,3 +502,145 @@ models/final_sl/layers_5x64.ckpt: loss = 2.184, accuracy = 0.490
 models/final_sl/layers_6x64.ckpt: loss = 2.201, accuracy = 0.500
 models/final_sl/layers_7x64.ckpt: loss = 2.092, accuracy = 0.510
 
+117298
+starting eta: 1e-05
+24. Oct 22:40:39, Step 26500
+models/final_sl/layers_5x48.ckpt: loss = 2.213, accuracy = 0.480
+models/final_sl/layers_6x48.ckpt: loss = 2.186, accuracy = 0.483
+models/final_sl/layers_7x48.ckpt: loss = 2.113, accuracy = 0.488
+models/final_sl/layers_5x64.ckpt: loss = 2.184, accuracy = 0.477
+models/final_sl/layers_6x64.ckpt: loss = 2.196, accuracy = 0.495
+models/final_sl/layers_7x64.ckpt: loss = 2.080, accuracy = 0.512
+24. Oct 22:48:18, Step 26600
+models/final_sl/layers_5x48.ckpt: loss = 2.222, accuracy = 0.478
+models/final_sl/layers_6x48.ckpt: loss = 2.197, accuracy = 0.498
+models/final_sl/layers_7x48.ckpt: loss = 2.124, accuracy = 0.468
+models/final_sl/layers_5x64.ckpt: loss = 2.189, accuracy = 0.477
+models/final_sl/layers_6x64.ckpt: loss = 2.204, accuracy = 0.497
+models/final_sl/layers_7x64.ckpt: loss = 2.096, accuracy = 0.508
+24. Oct 23:03:08, Step 26800
+models/final_sl/layers_5x48.ckpt: loss = 2.213, accuracy = 0.475
+models/final_sl/layers_6x48.ckpt: loss = 2.183, accuracy = 0.492
+models/final_sl/layers_7x48.ckpt: loss = 2.113, accuracy = 0.487
+models/final_sl/layers_5x64.ckpt: loss = 2.179, accuracy = 0.483
+models/final_sl/layers_6x64.ckpt: loss = 2.192, accuracy = 0.495
+models/final_sl/layers_7x64.ckpt: loss = 2.078, accuracy = 0.507
+24. Oct 23:18:11, Step 27000
+models/final_sl/layers_5x48.ckpt: loss = 2.235, accuracy = 0.480
+models/final_sl/layers_6x48.ckpt: loss = 2.203, accuracy = 0.500
+models/final_sl/layers_7x48.ckpt: loss = 2.118, accuracy = 0.475
+models/final_sl/layers_5x64.ckpt: loss = 2.196, accuracy = 0.488
+models/final_sl/layers_6x64.ckpt: loss = 2.205, accuracy = 0.502
+models/final_sl/layers_7x64.ckpt: loss = 2.105, accuracy = 0.507
+24. Oct 23:33:03, Step 27200
+models/final_sl/layers_5x48.ckpt: loss = 2.205, accuracy = 0.478
+models/final_sl/layers_6x48.ckpt: loss = 2.187, accuracy = 0.493
+models/final_sl/layers_7x48.ckpt: loss = 2.118, accuracy = 0.478
+models/final_sl/layers_5x64.ckpt: loss = 2.176, accuracy = 0.488
+models/final_sl/layers_6x64.ckpt: loss = 2.190, accuracy = 0.505
+models/final_sl/layers_7x64.ckpt: loss = 2.092, accuracy = 0.508
+24. Oct 23:47:56, Step 27400
+models/final_sl/layers_5x48.ckpt: loss = 2.231, accuracy = 0.475
+models/final_sl/layers_6x48.ckpt: loss = 2.201, accuracy = 0.483
+models/final_sl/layers_7x48.ckpt: loss = 2.118, accuracy = 0.480
+models/final_sl/layers_5x64.ckpt: loss = 2.195, accuracy = 0.493
+models/final_sl/layers_6x64.ckpt: loss = 2.202, accuracy = 0.493
+models/final_sl/layers_7x64.ckpt: loss = 2.105, accuracy = 0.508
+24. Oct 23:55:49, Step 27500
+models/final_sl/layers_5x48.ckpt: loss = 2.212, accuracy = 0.485
+models/final_sl/layers_6x48.ckpt: loss = 2.183, accuracy = 0.498
+models/final_sl/layers_7x48.ckpt: loss = 2.113, accuracy = 0.482
+models/final_sl/layers_5x64.ckpt: loss = 2.177, accuracy = 0.492
+models/final_sl/layers_6x64.ckpt: loss = 2.189, accuracy = 0.502
+models/final_sl/layers_7x64.ckpt: loss = 2.084, accuracy = 0.502
+25. Oct 00:34:29, Step 28000
+models/final_sl/layers_5x48.ckpt: loss = 2.208, accuracy = 0.492
+models/final_sl/layers_6x48.ckpt: loss = 2.183, accuracy = 0.498
+models/final_sl/layers_7x48.ckpt: loss = 2.114, accuracy = 0.477
+models/final_sl/layers_5x64.ckpt: loss = 2.175, accuracy = 0.497
+models/final_sl/layers_6x64.ckpt: loss = 2.192, accuracy = 0.507
+models/final_sl/layers_7x64.ckpt: loss = 2.089, accuracy = 0.508
+25. Oct 01:12:52, Step 28500
+models/final_sl/layers_5x48.ckpt: loss = 2.198, accuracy = 0.495
+models/final_sl/layers_6x48.ckpt: loss = 2.179, accuracy = 0.498
+models/final_sl/layers_7x48.ckpt: loss = 2.111, accuracy = 0.485
+models/final_sl/layers_5x64.ckpt: loss = 2.167, accuracy = 0.488
+models/final_sl/layers_6x64.ckpt: loss = 2.184, accuracy = 0.500
+models/final_sl/layers_7x64.ckpt: loss = 2.070, accuracy = 0.507
+25. Oct 01:51:05, Step 29000
+models/final_sl/layers_5x48.ckpt: loss = 2.205, accuracy = 0.488
+models/final_sl/layers_6x48.ckpt: loss = 2.182, accuracy = 0.495
+models/final_sl/layers_7x48.ckpt: loss = 2.117, accuracy = 0.473
+models/final_sl/layers_5x64.ckpt: loss = 2.185, accuracy = 0.488
+models/final_sl/layers_6x64.ckpt: loss = 2.190, accuracy = 0.490
+models/final_sl/layers_7x64.ckpt: loss = 2.094, accuracy = 0.507
+25. Oct 02:32:42, Step 29500
+models/final_sl/layers_5x48.ckpt: loss = 2.212, accuracy = 0.490
+models/final_sl/layers_6x48.ckpt: loss = 2.179, accuracy = 0.493
+models/final_sl/layers_7x48.ckpt: loss = 2.113, accuracy = 0.485
+models/final_sl/layers_5x64.ckpt: loss = 2.166, accuracy = 0.485
+models/final_sl/layers_6x64.ckpt: loss = 2.190, accuracy = 0.493
+models/final_sl/layers_7x64.ckpt: loss = 2.111, accuracy = 0.508
+25. Oct 03:14:23, Step 30000
+models/final_sl/layers_5x48.ckpt: loss = 2.240, accuracy = 0.470
+models/final_sl/layers_6x48.ckpt: loss = 2.193, accuracy = 0.487
+models/final_sl/layers_7x48.ckpt: loss = 2.127, accuracy = 0.467
+models/final_sl/layers_5x64.ckpt: loss = 2.194, accuracy = 0.475
+models/final_sl/layers_6x64.ckpt: loss = 2.210, accuracy = 0.495
+models/final_sl/layers_7x64.ckpt: loss = 2.103, accuracy = 0.513
+25. Oct 03:55:58, Step 30500
+models/final_sl/layers_5x48.ckpt: loss = 2.207, accuracy = 0.485
+models/final_sl/layers_6x48.ckpt: loss = 2.187, accuracy = 0.495
+models/final_sl/layers_7x48.ckpt: loss = 2.118, accuracy = 0.485
+models/final_sl/layers_5x64.ckpt: loss = 2.192, accuracy = 0.487
+models/final_sl/layers_6x64.ckpt: loss = 2.207, accuracy = 0.478
+models/final_sl/layers_7x64.ckpt: loss = 2.119, accuracy = 0.507
+25. Oct 04:37:42, Step 31000
+models/final_sl/layers_5x48.ckpt: loss = 2.213, accuracy = 0.470
+models/final_sl/layers_6x48.ckpt: loss = 2.179, accuracy = 0.493
+models/final_sl/layers_7x48.ckpt: loss = 2.108, accuracy = 0.485
+models/final_sl/layers_5x64.ckpt: loss = 2.168, accuracy = 0.498
+models/final_sl/layers_6x64.ckpt: loss = 2.196, accuracy = 0.502
+models/final_sl/layers_7x64.ckpt: loss = 2.077, accuracy = 0.522
+25. Oct 05:19:20, Step 31500
+models/final_sl/layers_5x48.ckpt: loss = 2.223, accuracy = 0.475
+models/final_sl/layers_6x48.ckpt: loss = 2.182, accuracy = 0.497
+models/final_sl/layers_7x48.ckpt: loss = 2.121, accuracy = 0.467
+models/final_sl/layers_5x64.ckpt: loss = 2.181, accuracy = 0.492
+models/final_sl/layers_6x64.ckpt: loss = 2.201, accuracy = 0.492
+models/final_sl/layers_7x64.ckpt: loss = 2.102, accuracy = 0.507
+25. Oct 06:00:54, Step 32000
+models/final_sl/layers_5x48.ckpt: loss = 2.212, accuracy = 0.487
+models/final_sl/layers_6x48.ckpt: loss = 2.189, accuracy = 0.500
+models/final_sl/layers_7x48.ckpt: loss = 2.125, accuracy = 0.465
+models/final_sl/layers_5x64.ckpt: loss = 2.190, accuracy = 0.490
+models/final_sl/layers_6x64.ckpt: loss = 2.206, accuracy = 0.500
+models/final_sl/layers_7x64.ckpt: loss = 2.089, accuracy = 0.503
+25. Oct 06:42:37, Step 32500
+models/final_sl/layers_5x48.ckpt: loss = 2.217, accuracy = 0.480
+models/final_sl/layers_6x48.ckpt: loss = 2.195, accuracy = 0.498
+models/final_sl/layers_7x48.ckpt: loss = 2.122, accuracy = 0.478
+models/final_sl/layers_5x64.ckpt: loss = 2.186, accuracy = 0.490
+models/final_sl/layers_6x64.ckpt: loss = 2.192, accuracy = 0.498
+models/final_sl/layers_7x64.ckpt: loss = 2.096, accuracy = 0.513
+25. Oct 07:24:10, Step 33000
+models/final_sl/layers_5x48.ckpt: loss = 2.235, accuracy = 0.488
+models/final_sl/layers_6x48.ckpt: loss = 2.209, accuracy = 0.495
+models/final_sl/layers_7x48.ckpt: loss = 2.132, accuracy = 0.487
+models/final_sl/layers_5x64.ckpt: loss = 2.204, accuracy = 0.467
+models/final_sl/layers_6x64.ckpt: loss = 2.209, accuracy = 0.492
+models/final_sl/layers_7x64.ckpt: loss = 2.107, accuracy = 0.510
+25. Oct 08:05:40, Step 33500
+models/final_sl/layers_5x48.ckpt: loss = 2.216, accuracy = 0.475
+models/final_sl/layers_6x48.ckpt: loss = 2.191, accuracy = 0.498
+models/final_sl/layers_7x48.ckpt: loss = 2.124, accuracy = 0.462
+models/final_sl/layers_5x64.ckpt: loss = 2.191, accuracy = 0.487
+models/final_sl/layers_6x64.ckpt: loss = 2.197, accuracy = 0.510
+models/final_sl/layers_7x64.ckpt: loss = 2.092, accuracy = 0.510
+25. Oct 08:47:28, Step 34000
+models/final_sl/layers_5x48.ckpt: loss = 2.220, accuracy = 0.482
+models/final_sl/layers_6x48.ckpt: loss = 2.189, accuracy = 0.487
+models/final_sl/layers_7x48.ckpt: loss = 2.119, accuracy = 0.463
+models/final_sl/layers_5x64.ckpt: loss = 2.188, accuracy = 0.488
+models/final_sl/layers_6x64.ckpt: loss = 2.194, accuracy = 0.503
+models/final_sl/layers_7x64.ckpt: loss = 2.082, accuracy = 0.515
