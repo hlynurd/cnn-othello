@@ -430,8 +430,62 @@ def corner_2x4():
     corner_2x4[3, 1] = 1
     return corner_2x4
 
-def board_to_input(board, player):
-    #TODO: Add a lot more heuristics!
+def to_onehot_8vals(array):
+    onehot1 = np.zeros((8,8))
+    onehot2 = np.zeros((8,8))
+    onehot3 = np.zeros((8,8))
+    onehot4 = np.zeros((8,8))
+    onehot5 = np.zeros((8,8))
+    onehot6 = np.zeros((8,8))
+    onehot7 = np.zeros((8,8))
+    onehot8 = np.zeros((8,8))
+    for i in range(0, 8):
+        for j in range(0, 8):
+            val = array[i, j]
+            if val == 0:
+                onehot1[i, j] = 1
+            if val == 1:
+                onehot2[i, j] = 1
+            if val == 2:
+                onehot3[i, j] = 1
+            if val == 3:
+                onehot4[i, j] = 1
+            if val == 4:
+                onehot5[i, j] = 1
+            if val == 5:
+                onehot6[i, j] = 1
+            if val == 6:
+                onehot7[i, j] = 1
+            if val >= 7:
+                onehot8[i, j] = 1
+    return np.dstack((onehot1, onehot2, onehot3, onehot4, onehot5, onehot6, onehot7, onehot8))
+    
+def history_stack(move_history):
+    history0 = np.zeros((8,8))
+    prev_move = str(move_history[0])
+    row = int(prev_move[0]) - 1
+    column = int(prev_move[1]) - 1
+    history0[row, column] = 1
+    
+    history1 = np.zeros((8,8))
+    prev_move = str(move_history[1])
+    row = int(prev_move[0]) - 1
+    column = int(prev_move[1]) - 1
+    history1[row, column] = 1
+    
+    history2 = np.zeros((8,8))
+    prev_move = str(move_history[2])
+    row = int(prev_move[0]) - 1
+    column = int(prev_move[1]) - 1
+    history2[row, column] = 1
+    
+    history3 = np.zeros((8,8))
+    prev_move = str(move_history[3])
+    row = int(prev_move[0]) - 1
+    column = int(prev_move[1]) - 1
+    history3[row, column] = 1
+    return np.dstack((history0, history1, history2, history3))
+def board_to_input(board, player, prev_moves):
     opponent = player * (-1)
     player_grid =  np.zeros((8,8))
     opponent_grid =  np.zeros((8,8))
@@ -440,28 +494,13 @@ def board_to_input(board, player):
     zeros = np.zeros((8,8))
     legal_move_grid = np.zeros((8,8))
     ones = np.ones((8,8))
-    corners = corner_board()
-    x_squares = np.zeros((8,8))
-    c_grid = c_squares()
-    mobility = np.zeros((8,8))
-    edges_a = edges_board_a()
-    edges_b = edges_board_b()
-    frontier = np.zeros((8,8))
+    mobility = np.ones((8,8)) * (-1)
+    frontier = np.ones((8,8)) * (-1)
     sum_player_stability = np.zeros((8,8))
     sum_opponent_stability = np.zeros((8,8))
-    coin_parity = np.zeros((8,8))
-    main_diagonal_1 = np.identity(8)
-    main_diagonal_2 = np.fliplr(np.identity(8))
     
-    corner_2x4_1 = corner_2x4()
-    corner_2x4_2 = np.rot90(corner_2x4_1)
-    corner_2x4_3 = np.rot90(corner_2x4_2)
-    corner_2x4_4 = np.rot90(corner_2x4_3)
-    corner_2x4_5 = np.transpose(corner_2x4_1)
-    corner_2x4_6 = np.transpose(corner_2x4_2)
-    corner_2x4_7 = np.transpose(corner_2x4_3)
-    corner_2x4_8 = np.transpose(corner_2x4_4)
-    
+    #TODO: Makee this into a function!
+    history = history_stack(prev_moves)
     
     #stability = np.zeros((8,8))
     for i in range(8):
@@ -484,7 +523,7 @@ def board_to_input(board, player):
         legal_move_grid[row][column] = 1
         mobility[row][column] = opponent_mobility_after_move(board, move, player)
         board_after_player_move = make_move(board, move, player)
-        coin_parity[row, column] = np.sum(board_after_player_move == player) - np.sum(board_after_player_move == player*(-1))
+        #coin_parity[row, column] = np.sum(board_after_player_move == player) - np.sum(board_after_player_move == player*(-1))
         board_after_opponent_move = make_move(board, move, opponent)
         frontier[row, column] = calculate_frontier(board, (row, column))
         # Only calculate stability if any of the twelve indicated corner cells are occupied
@@ -505,7 +544,7 @@ def board_to_input(board, player):
             potential_opponent_stability = get_stability_features(board_after_opponent_move, opponent, initial_rows, initial_columns, initial_NW, initial_NE)
             sum_player_stability[row][column] = np.sum(potential_player_stability)
             sum_opponent_stability[row][column] = np.sum(potential_opponent_stability)
-        
+    
     ind_rows  = filled_rows(board)    
     ind_columns = filled_columns(board)
     ind_NW = filled_NW(board)
@@ -515,18 +554,17 @@ def board_to_input(board, player):
     initial_NW = get_filled_NW_features(ind_NW)
     initial_NE = get_filled_NE_features(ind_NE)
     current_stability = get_stability_features(board, player, initial_rows, initial_columns, initial_NW, initial_NE)
+    current_opponent_stability = get_stability_features(board, opponent, initial_rows, initial_columns, initial_NW, initial_NE)
+    
     #TODO: Add these features again after speeding up the stability calculations
     #current_player_stability = get_stability_features(board, player, stability, rows, columns, NW, NE)
     #current_opponent_stability = get_stability_features(board, opponent, stability, rows, columns, NW, NE)
-    x_squares[1][1] = 1
-    x_squares[6][1] = 1
-    x_squares[6][6] = 1
-    x_squares[1][6] = 1
-    
-    
 
-    return np.dstack((player_grid, opponent_grid, empties, player_constant, zeros, legal_move_grid,
-                          corners, x_squares, c_grid, ones, mobility, edges_a, edges_b,
-                          sum_player_stability, sum_opponent_stability, current_stability, frontier, coin_parity,
-                          main_diagonal_1, main_diagonal_2, corner_2x4_1, corner_2x4_2, corner_2x4_3, corner_2x4_4,
-                          corner_2x4_5, corner_2x4_6, corner_2x4_7, corner_2x4_8))
+    player_stability_gained = sum_player_stability - np.sum(current_stability)
+    opponent_stability_gained = sum_opponent_stability - np.sum(current_opponent_stability)
+    player_stability_gained = player_stability_gained.clip(min=0)
+    opponent_stability_gained = opponent_stability_gained.clip(min=0)
+    
+    #print np.unique(player_stability_gained)
+    #print np.unique(opponent_stability_gained)
+    return np.dstack((history, player_grid, opponent_grid, empties, player_constant, zeros, legal_move_grid, ones, to_onehot_8vals(mobility), to_onehot_8vals(player_stability_gained), to_onehot_8vals(opponent_stability_gained), to_onehot_8vals(frontier)))
