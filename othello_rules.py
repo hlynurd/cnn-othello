@@ -1,6 +1,6 @@
 from itertools import product
 import numpy as np
-
+from struct import *
 def initialize_game():
     board = np.zeros((8,8))
     board[3][3] = 1
@@ -8,6 +8,16 @@ def initialize_game():
     board[4][3] = -1
     board[4][4] = 1
     return board
+
+def initialize_game_full():
+    new_board = initialize_game()
+    initial_player = -1
+    no_history = [56, 56, 56, 56]
+    return new_board, initial_player, no_history
+
+def unpack_movelist(match):
+    raw_match_movelist = match[8:]
+    return unpack('b'*60, raw_match_movelist)
 
 def make_move(board, move, player, debug = False):
     if debug:
@@ -24,6 +34,22 @@ def make_move(board, move, player, debug = False):
     private_board = do_takeovers(private_board, row, column, player)[0]
     return private_board
 
+def update_states(player, board, move, previous_moves):
+    if player is 1:
+        player = -1
+    else:
+        player = 1
+    legal_moves = find_legal_moves(board, player)
+    if len(legal_moves) == 0:
+        if player is 1:
+            player = -1
+        else:
+            player = 1
+    previous_moves[3] = previous_moves[2]
+    previous_moves[2] = previous_moves[1]
+    previous_moves[1] = previous_moves[0]
+    previous_moves[0] = move
+    return player, legal_moves, previous_moves
 def get_winner(board, black, white):
     if get_points(board, black) > get_points(board, white):
         return black 

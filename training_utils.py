@@ -1,10 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- 
 import numpy as np
+import os
 from struct import *
 from feature_extractor import *
 from othello_rules import *
-import os
+from datetime import datetime
+
 
 def prep_and_append_training_batch(step, action_batch, action, features_batch, state, player):
         feature_path = 'cache/training/features/features_' + str(step) + "_" + str(action) + ".npy"
@@ -163,3 +165,69 @@ def flip_features(features, symmetry_action):
         if symmetry_action == 'both':
             flipped_features[:,:,i] = np.transpose(np.rot90(np.rot90(np.transpose(features[:,:,i]))))
     return flipped_features
+
+def add_flips(inputs, labels, feature_planes, next_move):
+    # Now we add 3 reflections of the game state
+    # which is done by flipping the board over one diagonal        
+    move_upright = flip_move_upright(next_move)
+    features_upright = flip_features(feature_planes, 'upright')
+    inputs.append(features_upright)
+    labels.append(prepare_data(move_to_label(move_upright)))
+
+    # Then the other diagonal
+    move_upleft = flip_move_upleft(next_move)
+    features_upleft = flip_features(feature_planes, 'upleft')
+    inputs.append(features_upleft)
+    labels.append(prepare_data(move_to_label(move_upleft)))
+
+    # Then both diagonals
+    move_both = flip_move_upright(flip_move_upleft(next_move))
+    features_both = flip_features(feature_planes, 'both')
+    inputs.append(features_both)
+    labels.append(prepare_data(move_to_label(move_both)))
+    return inputs, labels
+
+def fetch_or_calculate_planes(board, player, previous_moves, move, feature_path, label_path, fetch):
+    if fetch:
+        if  os.path.isfile(feature_path) and os.path.isfile(label_path):
+            try:
+                features = np.load(feature_path)
+                label = np.load(label_path)
+            except:
+                print("data corruption in match " + str(i))
+                features = board_to_input(board, player, previous_moves)
+                label = prepare_data(move_to_label(move))
+        else:
+            features = board_to_input(board, player, previous_moves)
+            label = prepare_data(move_to_label(move))
+    else:
+        features = board_to_input(board, player, previous_moves)
+        label = prepare_data(move_to_label(move))
+    return features, label
+
+def check_rotational_invariance(board, move, move_argmax, success):
+    original_board = np.array(board)
+    board_upright = np.transpose(original_board)
+    board_upleft = np.rot90(np.rot90(board_upright))
+    board_both_flips = np.transpose(board_upleft)
+    if np.array_equal(board, board_upright):
+        if str(move_argmax) == flip_move_upright(move):
+            success += 1
+        if np.array_equal(board, board_upleft):
+            if str(move_argmax) == flip_move_upleft(move):
+                success += 1
+        if np.array_equal(board, board_both_flips):
+            if str(move_argmax) == flip_move_upright(flip_move_upleft(move)):
+                success += 1
+    return success
+
+def log_experiment(log_file, log_time, log_acc, log_loss, i):
+    with open(log_file, "a") as myfile:
+        myfile.write(log_time)
+        myfile.write(", Step ")
+        myfile.write(str(i))
+        myfile.write(": ")
+        myfile.write(str(log_acc))
+        myfile.write(" ")
+        myfile.write(str(log_loss))
+        myfile.write("\n")
