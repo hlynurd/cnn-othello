@@ -69,42 +69,61 @@ def create_othello_net():
     keep_prob = tf.placeholder(tf.float32, name="keep_prob")
     training = tf.placeholder(tf.bool, name="training")
     #convolutional layers 
-    i = 43; o = 32;
+    i = 43; o = 64;
     conv1_weights = conv_weights(i, o)
     conv1_biases = conv_biases(o)
     conv1_out = conv_nonparams(img_data, conv1_weights, conv1_biases, keep_prob, training, use_batch_normalization)
     
-    i = o; o = 32;
+    i = o
     conv2_weights = conv_weights(i, o)
     conv2_biases = conv_biases(o)
     conv2_out = conv_nonparams(conv1_out, conv2_weights, conv2_biases, keep_prob, training, use_batch_normalization)
     
-    i = o; o = 32;
+
     conv3_weights = conv_weights(i, o)
     conv3_biases = conv_biases(o)
     conv3_out = conv_nonparams(conv2_out, conv3_weights, conv3_biases, keep_prob, training, use_batch_normalization)
     
-    #i = o; o = 32;
-    #conv4_weights = conv_weights(i, o)
-    #conv4_biases = conv_biases(o)
-    #conv4_out = conv_nonparams(conv3_out, conv4_weights, conv4_biases, keep_prob)
+    
+    conv4_weights = conv_weights(i, o)
+    conv4_biases = conv_biases(o)
+    conv4_out = conv_nonparams(conv3_out, conv4_weights, conv4_biases, keep_prob, training, use_batch_normalization)
     #XXX: Use conv4_out into score_out for fast-net
     
-    #i = o; o = 32;
-    #conv5_weights = conv_weights(i, o)
-    #conv5_biases = conv_biases(o)
-    #conv5_out = conv_nonparams(conv4_out, conv5_weights, conv5_biases, keep_prob)
     
-    #i = o; o = 32 ;
-    #conv6_weights = conv_weights(i, o)
-    #conv6_biases = conv_biases(o)
-    #conv6_out = conv_nonparams(conv5_out, conv6_weights, conv6_biases, keep_prob)
+    conv5_weights = conv_weights(i, o)
+    conv5_biases = conv_biases(o)
+    conv5_out = conv_nonparams(conv4_out, conv5_weights, conv5_biases, keep_prob, training, use_batch_normalization)
     
+    
+    conv6_weights = conv_weights(i, o)
+    conv6_biases = conv_biases(o)
+    conv6_out = conv_nonparams(conv5_out, conv6_weights, conv6_biases, keep_prob, training, use_batch_normalization)
+    
+    
+    conv7_weights = conv_weights(i, o)
+    conv7_biases = conv_biases(o)
+    conv7_out = conv_nonparams(conv6_out, conv7_weights, conv7_biases, keep_prob, training, use_batch_normalization)
+
+    
+    #conv8_weights = conv_weights(i, o)
+    #conv8_biases = conv_biases(o)
+    #conv8_out = conv_nonparams(conv7_out, conv8_weights, conv8_biases, keep_prob, training, use_batch_normalization)
+   
+    #conv9_weights = conv_weights(i, o)
+    #conv9_biases = conv_biases(o)
+    #conv9_out = conv_nonparams(conv8_out, conv9_weights, conv9_biases, keep_prob, training, use_batch_normalization)
+
+    
+    #conv10_weights = conv_weights(i, o)
+    #conv10_biases = conv_biases(o)
+    #conv10_out = conv_nonparams(conv9_out, conv10_weights, conv10_biases, keep_prob, training, use_batch_normalization)
     #scoring layer
     k = 1; i = o; o = 2;
     score_weights = weight_variable([k, k, i, o])
     score_biases = bias_variable([o])
-    score_out = final_conv_nonparams(conv3_out, score_weights, score_biases, keep_prob)
+    score_out = final_conv_nonparams(conv7_out, score_weights, score_biases, keep_prob)
+	
 
 
     #final layer
