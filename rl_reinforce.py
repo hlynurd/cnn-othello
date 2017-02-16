@@ -8,19 +8,17 @@ class REINFORCEothello(object):
   def __init__(self, session,
                      optimizer,
                      learn_rate,
-                     keep_prob,
                      loss,
                      policy_network,
                      taken_actions,
                      states,
-                     eta = 3e-5,
+                     eta = 3e-6,
                      discount_factor=1, # discount future rewards
                     ):
 
     # tensorflow machinery
     self.session        = session
     self.optimizer      = optimizer
-    self.keep_prob      = keep_prob
     self.learn_rate     = learn_rate
     self.eta            = eta
     # model components
@@ -45,11 +43,10 @@ class REINFORCEothello(object):
     # record reward history for normalization
     self.all_rewards = []
     self.max_reward_length = 1000000
-
     # create and initialize variables
     self.create_variables()
-    var_lists = tf.get_collection(tf.GraphKeys.VARIABLES)
-    self.session.run(tf.initialize_variables(var_lists))
+    var_lists = tf.get_collection(tf.GraphKeys.GLOBAL_VARIABLES)
+    self.session.run(tf.variables_initializer(var_lists))
 
     # make sure all variables are initialized
     self.session.run(tf.assert_variables_initialized())
@@ -83,7 +80,7 @@ class REINFORCEothello(object):
     self.all_rewards += discounted_rewards.tolist()
     self.all_rewards = self.all_rewards[:self.max_reward_length]
     #discounted_rewards -= np.mean(self.all_rewards)
-    discounted_rewards /= np.std(self.all_rewards)
+    #discounted_rewards /= np.std(self.all_rewards)
 
 
     # update policy network with the rollout in batches
@@ -94,7 +91,6 @@ class REINFORCEothello(object):
       actions = np.array([self.action_buffer[t]])
        
       rewards = np.array([discounted_rewards[t]])
-    
       #print(rewards)
       #print(len(discounted_rewards))
       # evaluate gradients
@@ -106,7 +102,7 @@ class REINFORCEothello(object):
         self.states:              states,
         self.taken_actions:      actions,
         self.discounted_rewards: rewards,
-        self.keep_prob:                1,
+                
         self.learn_rate :       self.eta
       })
 
