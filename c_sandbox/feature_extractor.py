@@ -619,7 +619,7 @@ def board_to_input_c(board, player, prev_moves):
 
     #TODO: Use Zebra to calculate find_legal_moves instead (change it in the Othello_rules file),
     #XXX: I'm sometimes generating "legal moves" that aren't legal at all!
-    for move in find_legal_moves(board, player):
+    for move in find_legal_moves_c(board, player):
         move = str(move)
         row = int(move[0]) - 1
         column = int(move[1]) - 1
