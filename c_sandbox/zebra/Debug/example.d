@@ -1,0 +1,1 @@
+example.d: ../example.c
