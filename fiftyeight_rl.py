@@ -18,8 +18,8 @@ np.set_printoptions(precision=2)
 def sample_action(prediction):
     prediction = np.transpose(prediction[0])
     prediction = np.transpose(prediction[1])
-    legal_moves = find_legal_moves(board, player)
-    prediciton = prediction / np.sum(prediction)
+    legal_moves = find_legal_moves_c(board, player)
+    prediction = prediction / np.sum(prediction)
     cleaned_predictions = zero_illegal_moves(prediction, legal_moves)
     p = cleaned_predictions.flatten()
     p = p / np.sum(p)
@@ -35,19 +35,12 @@ for i in range(8):
         moves[i*8 + j] = str((i+1) * 10 + (j+1))
         
 
-batches = 120
-games_per_batch = 100
-test_game_batch = 99
-initial_a_model = "models/rl-p-a/a_player_0.ckpt"
-
-
-cnt = 0
-action_buffer = []
-state_buffer = []
-reward_buffer = []
+batches = 1200
+games_per_batch = 128
 print("starting rl policy network")
 
 graph_2 = tf.Graph()
+
 with graph_2.as_default():
     img_data_2, train_step_2, optimizer_2, ground_truths_2, loss_2, pred_up_2,  learn_rate_2, score_out_2 = create_no_graph()
 
@@ -69,18 +62,18 @@ with sess_1.as_default():
                           img_data_1)
         tf.global_variables_initializer().run()
         saver_1 = tf.train.Saver(tf.global_variables())
-        model_1= "supervised/models2/layers8filters64.ckpt"
+        model_1= "models/rl_models/rl_fiftyeight.ckpt"
         if os.path.isfile(model_1 + ".meta"):
-            print("locked and loaded")
+            print("locked and loaded 1")
             saver_1.restore(sess_1, model_1)
             
 with sess_2.as_default():
     with graph_2.as_default():
         tf.global_variables_initializer().run()
         saver_2 = tf.train.Saver(tf.global_variables())
-        model_2= "supervised/models2/layers8filters64.ckpt"
+        model_2= "supervised/models/layers8filters64.ckpt"
         if os.path.isfile(model_2 + ".meta"):
-            print("locked and loaded")
+            print("locked and loaded 2")
             saver_2.restore(sess_2, model_2)    
 
 
@@ -89,10 +82,7 @@ for batch in range(batches):
     graph_1 = -1
     graph_2 = 1
     graph_1_wins = 0
-    avg_vector_1 = []
     graph_2_wins = 0
-    avg_vector_2 = []
-    temp_reset = True
     failcount = 0
     for n in range(N):
         board, player, previous_moves = initialize_game_full()
@@ -101,7 +91,7 @@ for batch in range(batches):
         input_batch = []
         label_batch = []
         while True:
-            legal_moves = find_legal_moves(board, player)
+            legal_moves = find_legal_moves_c(board, player)
             if len(legal_moves) == 0:
                 winner = get_winner(board, 1, -1)
                 if winner is graph_1:
@@ -116,7 +106,7 @@ for batch in range(batches):
                     winner = -3
                     break
                 continue
-            features = board_to_input(board, player, previous_moves)
+            features = board_to_input_c(board, player, previous_moves)
             if player is graph_1:
                 prediction = sess_1.run(pred_up_1, feed_dict={img_data_1:[features]})
             else:
@@ -143,6 +133,10 @@ for batch in range(batches):
         graph_1 = graph_1 * (-1); graph_2 = graph_2 * (-1);
         if n+1 is games_per_batch:
             print('%s  %s wr: %.2f, %s wr: %.2f' % (datetime.now().strftime("%d. %H:%M:%S"), model_1[14:], graph_1_wins/float(N), model_2[14:], graph_2_wins/float(N)))
+            with open("rl_logs.txt", "a") as myfile:
+               myfile.write(str(graph_1_wins / float(N)))
+               myfile.write("\n")
             graph_1_wins = 0; graph_2_wins = 0;
             rl_reinforce_1.updateModel()
+#            save_path = saver_1.save(sess_1, "models/rl_models/rl_fiftyeight.ckpt")
 print("done")
