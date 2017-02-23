@@ -45,9 +45,7 @@ int* get_mobility(int pyboard[], int color){
            board[i*10+j] = pyboard[i*10+j];
         }
     }
-    print_board();
     set_mobility(color);
-    print_8x8(opp_mobility);
 	return opp_mobility;
 }
 
@@ -59,7 +57,6 @@ int* get_stability(int pyboard[], int color){
         }
     }
     set_stable(color);
-    print_8x8(stable_array);
 	return stable_array;
 }
 
@@ -104,12 +101,21 @@ int* get_legal_moves(int pyboard[], int color){
     init_moves();
     generate_all(color);
     int color_moves = move_count[disks_played];
-    print_board();
     for(int i = 0; i < color_moves; i++) {
-	printf("Legal move = %d\n", move_list[disks_played][i]);
     	moves_array[i] = move_list[disks_played][i];
     }
 	return moves_array;
+}
+
+int* make_fast_move(int pyboard[], int move, int color){
+	 game_init(NULL, NULL);
+     for(int i = 1; i < 9; i++) {
+         for(int j = 1; j < 9; j++) {
+            board[i*10+j] = pyboard[i*10+j];
+         }
+     }
+     make_move(color, move, 1);
+	 return board;
 }
 
 
