@@ -1,0 +1,3 @@
+snapshots contains a copy of the best model so far, 57.5 pct predicti…
+
+…on accuracy on the tournament data from 2016
