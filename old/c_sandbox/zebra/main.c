@@ -1,0 +1,236 @@
+#include <stdio.h>
+#include "constant.h"
+#include "globals.h"
+#include "game.h"
+#include "bitboard.h"
+#include "stable.h"
+#include "moves.h"
+
+/* Some brand spankin' new globals*/
+int stable_array[100];
+int opp_mobility[100];
+int moves_array[30];
+BitBoard my_bits, opp_bits;
+
+void
+print_board(){
+    for(int i = 1; i < 9; i++) {
+        for(int j = 1; j < 9; j++) {
+        	if(board[i*10+j] == BLACKSQ ){
+        		printf("⚫ ");
+        	} else if(board[i*10+j] == WHITESQ){
+        		printf("○ ");
+        	} else{
+        		printf("· ");
+        	}
+        }
+        printf("\n");
+    }
+}
+
+void
+print_8x8(int plane[]){
+    for(int i = 1; i < 9; i++) {
+        for(int j = 1; j < 9; j++) {
+           printf("%d ", plane[i*10+j]);
+        }
+        printf("\n");
+    }
+}
+
+int* get_mobility(int pyboard[], int color){
+	game_init(NULL, NULL);
+    for(int i = 1; i < 9; i++) {
+        for(int j = 1; j < 9; j++) {
+           board[i*10+j] = pyboard[i*10+j];
+        }
+    }
+    set_mobility(color);
+	return opp_mobility;
+}
+
+int* get_stability(int pyboard[], int color){
+	game_init(NULL, NULL);
+    for(int i = 1; i < 9; i++) {
+        for(int j = 1; j < 9; j++) {
+           board[i*10+j] = pyboard[i*10+j];
+        }
+    }
+    set_stable(color);
+	return stable_array;
+}
+
+void
+init_modded_ffo_58(){
+	game_init(NULL, NULL);
+	int seq[32] = {45, 53, 32, 23, 22, 35,
+			42, 21, 12, 54, 52, 31, 41, 13,
+			24, 50, 02, 51, 25, 55, 65, 04,
+			14, 05, 64, 26, 62, 36, 46, 03,
+			01, 00	}; /* hdh adds two more moves for some stable pieces */
+	int current_player = BLACKSQ;
+    for(int i = 0; i < 32; i++) {
+        make_move(current_player, seq[i]+11, 1);
+        if(current_player == BLACKSQ){
+        	current_player = WHITESQ;
+        } else {
+        	current_player = BLACKSQ;
+        }
+    }
+}
+
+
+int
+count_empty(int non_empty){
+	int max_empty = 60;
+	return max_empty- non_empty;
+}
+
+int* get_legal_moves(int pyboard[], int color){
+	game_init(NULL, NULL);
+	int i, j;
+    for (i = 0; i < 30; i++){
+    	moves_array[i] = 0;
+    }
+    for(int i = 1; i < 9; i++) {
+        for(int j = 1; j < 9; j++) {
+           board[i*10+j] = pyboard[i*10+j];
+        }
+    }
+	set_bitboards( board, color, &my_bits, &opp_bits );
+    init_moves();
+    generate_all(color);
+    int color_moves = move_count[disks_played];
+    for(int i = 0; i < color_moves; i++) {
+    	moves_array[i] = move_list[disks_played][i];
+    }
+	return moves_array;
+}
+
+int* make_fast_move(int pyboard[], int move, int color){
+	 game_init(NULL, NULL);
+     for(int i = 1; i < 9; i++) {
+         for(int j = 1; j < 9; j++) {
+            board[i*10+j] = pyboard[i*10+j];
+         }
+     }
+     make_move(color, move, 1);
+	 return board;
+}
+
+
+int count_stables(int pyboard[], int color){
+	 game_init(NULL, NULL);
+     for(int i = 1; i < 9; i++) {
+         for(int j = 1; j < 9; j++) {
+            board[i*10+j] = pyboard[i*10+j];
+         }
+     }
+	 set_bitboards( board, color, &my_bits, &opp_bits );
+	 int color_edge_stable = count_edge_stable(color, my_bits, opp_bits);
+	 int color_stable = count_stable(color, my_bits, opp_bits);
+	 return color_stable;
+}
+
+/* Updates stable_array to hold the feature plane with -1 everywhere
+ * except where COLOR can make a legal move; it holds the amount of
+ * stable pieces for COLOR after placing a piece there. */
+void
+set_stable(int color){
+	set_bitboards( board, color, &my_bits, &opp_bits );
+	int edge_stable, stable;
+    init_moves();
+    generate_all(color);
+    int i, j, pos;
+    int NA = -1;
+    for ( i = 0; i < 10; i++ )
+        	for ( j = 0; j < 10; j++ ) {
+        		pos = 10 * i + j;
+        		stable_array[pos] = NA;
+        	}
+    int color_moves = move_count[disks_played];
+    for(int i = 0; i < color_moves; i++) {
+        make_move(color, move_list[disks_played][i], 1);
+        set_bitboards(board, color, &my_bits, &opp_bits );
+        edge_stable = count_edge_stable(color, my_bits, opp_bits);
+        stable = count_stable(color, my_bits, opp_bits);
+        stable_array[move_list[disks_played-1][i]] = stable;
+        unmake_move(color, move_list[disks_played-1][i]);
+    }
+}
+
+void set_mobility(int color){
+	set_bitboards( board, color, &my_bits, &opp_bits );
+    init_moves();
+    generate_all(color);
+    int i, j, pos, mobility, empty, my_moves;
+    int upper_mobility = -1;
+    for ( i = 0; i < 10; i++ )
+        	for ( j = 0; j < 10; j++ ) {
+        		pos = 10 * i + j;
+        		opp_mobility[pos] = upper_mobility;
+        	}
+    my_moves = move_count[disks_played];
+    for(int i = 0; i < my_moves; i++) {
+        make_move(color, move_list[disks_played][i], 1);
+        set_bitboards(board, color, &my_bits, &opp_bits );
+        empty = count_empty(disks_played);
+        if(color == BLACKSQ) mobility = count_all(WHITESQ, empty);
+        else                 mobility = count_all(BLACKSQ, empty);
+        opp_mobility[move_list[disks_played-1][i]] = mobility;
+        unmake_move(color, move_list[disks_played-1][i]);
+    }
+}
+
+int
+main(void) {
+
+
+	/* Testing initializing a board and printing it out */
+    game_init(NULL, NULL);
+    print_board();
+
+    /* Testing move finding, mobility calculations and move making */
+    int empty, black_mobility;
+    init_moves();
+    generate_all(BLACKSQ);
+    empty = count_empty(disks_played);
+    black_mobility = count_all(BLACKSQ, empty);
+
+		printf("legal moves for black = %d\n", move_count[disks_played]);
+		printf("a legal move for black = %d\n", move_list[disks_played][0]);
+		printf("number of empty spaces = %d\n", empty);
+		printf("black mobility = %d\n", black_mobility);
+		printf("BLACKSQ = %d\n", BLACKSQ);
+
+    int update_hash = 1;
+    make_move(BLACKSQ, 34, update_hash);
+    print_board();
+
+    /* Testing building a custom state and counting stable pieces*/
+    printf("Building modded ffo challenge nr. 58\n");
+    init_modded_ffo_58();
+    print_board();
+    	/*  int white_edge_stable, white_stable;
+    	 *  set_bitboards( board, WHITESQ, &my_bits, &opp_bits );
+    	 *  white_edge_stable = count_edge_stable(WHITESQ, my_bits, opp_bits);
+    	 *  white_stable = count_stable(WHITESQ, my_bits, opp_bits);
+    	printf("stable white edge pieces = %d\n", white_edge_stable);
+    	printf("stable white pieces = %d\n", white_stable);
+    	printf("number of empty spaces = %d\n", count_empty(disks_played));
+    	*/
+
+    /* Calculate and print stable metrics per legal location for both*/
+    	/* A general function that updates the stable vector for a color*/
+    set_stable(BLACKSQ);
+    set_stable(WHITESQ);
+    	/*print_8x8(stable_array);*/
+
+    /* Next make a feature plane with resulting opponent mobility
+     * after a move is made in each legal cell. */
+	set_mobility(BLACKSQ);
+    set_mobility(WHITESQ);
+    print_8x8(opp_mobility);
+    return 0;
+}
+

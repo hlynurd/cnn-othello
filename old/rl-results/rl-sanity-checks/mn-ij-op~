@@ -1,0 +1,99 @@
+m/n:
+
+            if winner is -1:
+                reward = 1 if j% 2 is 0 else -0.5
+            else:
+                reward = -0.5 if j% 2 is 0 else 1
+
+                     eta = 2e-4,
+                     discount_factor=1
+
+117298
+start training
+10. Oct 22:14:27, Step 0, loss_1 = 43.841, loss_2 = 37.590
+10. Oct 22:15:07, Step 100, loss_1 = 3.022, loss_2 = 2.948
+10. Oct 22:15:51, Step 200, loss_1 = 2.693, loss_2 = 2.603
+10. Oct 22:16:35, Step 299, loss_1 = 2.538, loss_2 = 2.491
+
+XXX: only bullcrap RL with this -r(s)
+
+
+            if winner is -1:
+                reward = 1 if j% 2 is 0 else -0.1
+            else:
+                reward = -0.1 if j% 2 is 0 else 1
+
+starting self play
+11. 13:17:59, Step 100: first = 21, second = 74
+11. 13:19:12, Step 200: first = 27, second = 71
+11. 13:20:23, Step 300: first = 29, second = 67
+11. 13:21:55, Step 400: first = 24, second = 72
+11. 13:23:28, Step 500: first = 26, second = 72
+11. 13:23:33, Results before learning : first wr = 0.25, second wr = 0.71
+11. 13:26:19, Step 600: first = 46, second = 52
+11. 13:27:49, Step 700: first = 49, second = 48
+11. 13:29:24, Step 800: first = 51, second = 49
+11. 13:30:50, Step 900: first = 50, second = 47
+
+    illegal action sampled
+
+    illegal action sampled
+
+11. 13:32:24, Step 1000: first = 56, second = 37
+11. 13:32:26, Results after learning : first wr = 0.50, second wr = 0.47
+
+i/j: 
+
+            if winner is -1:
+                reward = 1 if j% 2 is 0 else -0.1
+            else:
+                reward = -0.1 if j% 2 is 0 else 1
+
+                     eta = 2e-4,
+                     discount_factor=1	
+
+
+117298
+start training
+10. Oct 22:14:27, Step 0, loss_1 = 43.841, loss_2 = 37.590
+10. Oct 22:15:07, Step 100, loss_1 = 3.022, loss_2 = 2.948
+10. Oct 22:15:51, Step 200, loss_1 = 2.693, loss_2 = 2.603
+10. Oct 22:16:35, Step 299, loss_1 = 2.538, loss_2 = 2.491
+
+starting self play
+11. 09:06:23, Step 100: first = 47, second = 48
+11. 09:08:22, Step 200: first = 41, second = 57
+11. 09:10:33, Step 300: first = 33, second = 63
+11. 09:12:51, Step 400: first = 39, second = 60
+11. 09:15:49, Step 500: first = 37, second = 63
+11. 09:15:55, Results before learning : first wr = 0.39, second wr = 0.58
+s
+11. 09:23:58, Step 600: first = 50, second = 42
+11. 09:28:09, Step 700: first = 53, second = 40
+11. 09:32:04, Step 800: first = 57, second = 39
+11. 09:36:02, Step 900: first = 57, second = 42
+11. 09:40:01, Step 1000: first = 59, second = 39
+11. 09:40:05, Results after learning : first wr = 0.55, second wr = 0.40
+
+o/p:
+
+# NO SUPERVISED LEARNING
+
+
+starting self play
+11. 12:42:18, Step 100: first = 41, second = 55
+11. 12:43:38, Step 200: first = 45, second = 52
+11. 12:45:01, Step 300: first = 48, second = 48
+11. 12:46:22, Step 400: first = 44, second = 45
+11. 12:47:45, Step 500: first = 46, second = 50
+11. 12:47:48, Results before learning : first wr = 0.45, second wr = 0.50
+s
+11. 12:50:25, Step 600: first = 58, second = 38
+11. 12:52:00, Step 700: first = 51, second = 41
+11. 12:53:34, Step 800: first = 55, second = 39
+11. 12:55:05, Step 900: first = 58, second = 35
+11. 12:56:43, Step 1000: first = 74, second = 19
+11. 12:56:44, Results after learning : first wr = 0.59, second wr = 0.34
+
+
+

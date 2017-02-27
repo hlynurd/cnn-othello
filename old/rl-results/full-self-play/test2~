@@ -1,0 +1,6 @@
+Now try another big full-self-play training session with the following parameter: 
+
+​                     eta = 5e-5,
+                     discount_factor=1
+
+if this overfits still, refer to test1 for more suitable values to try.
