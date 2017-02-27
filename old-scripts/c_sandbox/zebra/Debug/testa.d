@@ -1,1 +1,0 @@
-testa.d: ../testa.c
