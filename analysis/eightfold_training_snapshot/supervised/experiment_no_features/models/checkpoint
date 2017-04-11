@@ -1,0 +1,2 @@
+model_checkpoint_path: "no_features_9l.ckpt"
+all_model_checkpoint_paths: "no_features_9l.ckpt"

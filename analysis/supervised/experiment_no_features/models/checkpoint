@@ -1,0 +1,2 @@
+model_checkpoint_path: "convothello_exp_10l.ckpt"
+all_model_checkpoint_paths: "convothello_exp_10l.ckpt"

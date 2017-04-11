@@ -1,0 +1,1545 @@
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 466.44MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x2c8b060
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 534.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x2c8ee50
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 534.50MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+locked and loaded
+start training
+28. Feb 19:55:31, Step 0, Accuracy = 0.241, Loss = 4.426
+28. Feb 19:55:50, Step 20, Accuracy = 0.244, Loss = 4.385
+28. Feb 19:56:08, Step 40, Accuracy = 0.245, Loss = 4.345
+28. Feb 19:56:27, Step 60, Accuracy = 0.247, Loss = 4.306
+28. Feb 19:56:45, Step 80, Accuracy = 0.242, Loss = 4.266
+28. Feb 19:57:03, Step 100, Accuracy = 0.248, Loss = 4.231
+28. Feb 19:57:59, Step 1000, Accuracy = 0.316, Loss = 3.221
+28. Feb 19:58:59, Step 2000, Accuracy = 0.374, Loss = 2.839
+28. Feb 19:59:58, Step 3000, Accuracy = 0.397, Loss = 2.706
+28. Feb 20:00:58, Step 4000, Accuracy = 0.410, Loss = 2.624
+28. Feb 20:01:53, Step 5000, Accuracy = 0.425, Loss = 2.548
+28. Feb 20:02:51, Step 6000, Accuracy = 0.421, Loss = 2.523
+28. Feb 20:03:50, Step 7000, Accuracy = 0.440, Loss = 2.485
+28. Feb 20:04:49, Step 8000, Accuracy = 0.449, Loss = 2.431
+28. Feb 20:05:50, Step 9000, Accuracy = 0.439, Loss = 2.414
+28. Feb 20:06:57, Step 10000, Accuracy = 0.458, Loss = 2.360
+28. Feb 20:07:56, Step 11000, Accuracy = 0.449, Loss = 2.326
+28. Feb 20:08:58, Step 12000, Accuracy = 0.446, Loss = 2.389
+28. Feb 20:10:01, Step 13000, Accuracy = 0.461, Loss = 2.318
+28. Feb 20:11:04, Step 14000, Accuracy = 0.472, Loss = 2.309
+28. Feb 20:12:05, Step 15000, Accuracy = 0.479, Loss = 2.272
+28. Feb 20:13:06, Step 16000, Accuracy = 0.477, Loss = 2.269
+28. Feb 20:14:07, Step 17000, Accuracy = 0.480, Loss = 2.292
+28. Feb 20:15:08, Step 18000, Accuracy = 0.479, Loss = 2.278
+28. Feb 20:16:08, Step 19000, Accuracy = 0.483, Loss = 2.253
+28. Feb 20:17:10, Step 20000, Accuracy = 0.490, Loss = 2.249
+28. Feb 20:18:14, Step 21000, Accuracy = 0.471, Loss = 2.231
+Traceback (most recent call last):
+  File "run_training.py", line 108, in <module>
+    learn_rate:eta})
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/ops.py", line 1449, in run
+    _run_using_default_session(self, feed_dict, self.graph, session)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/ops.py", line 3668, in _run_using_default_session
+    session.run(operation, feed_dict)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 766, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 943, in _run
+    % (np_val.shape, subfeed_t.name, str(subfeed_t.get_shape())))
+ValueError: Cannot feed value of shape (0,) for Tensor u'img_data:0', which has shape '(?, 8, 8, 43)'
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 466.44MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x39bc060
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 534.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x39bfe50
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 534.50MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+locked and loaded
+start training
+28. Feb 21:25:58, Step 0, Accuracy = 0.478, Loss = 2.216
+28. Feb 21:27:11, Step 20, Accuracy = 0.483, Loss = 2.205
+28. Feb 21:28:18, Step 40, Accuracy = 0.485, Loss = 2.216
+28. Feb 21:29:23, Step 60, Accuracy = 0.483, Loss = 2.219
+28. Feb 21:30:30, Step 80, Accuracy = 0.479, Loss = 2.213
+28. Feb 21:31:39, Step 100, Accuracy = 0.483, Loss = 2.208
+Traceback (most recent call last):
+  File "run_training.py", line 108, in <module>
+    learn_rate:eta})
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/ops.py", line 1449, in run
+    _run_using_default_session(self, feed_dict, self.graph, session)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/framework/ops.py", line 3668, in _run_using_default_session
+    session.run(operation, feed_dict)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 766, in run
+    run_metadata_ptr)
+  File "/usr/local/lib/python2.7/dist-packages/tensorflow/python/client/session.py", line 943, in _run
+    % (np_val.shape, subfeed_t.name, str(subfeed_t.get_shape())))
+ValueError: Cannot feed value of shape (0,) for Tensor u'img_data:0', which has shape '(?, 8, 8, 43)'
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 466.44MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x28ed060
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 534.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x28f0e50
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 534.50MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 466.44MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x441a5f0
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 534.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x441e3e0
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 534.50MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+locked and loaded
+start training
+Traceback (most recent call last):
+  File "run_training.py", line 107, in <module>
+    if len(input_batch > 0):        
+TypeError: object of type 'bool' has no len()
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 466.44MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x285d7d0
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 534.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x28615f0
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 534.50MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+locked and loaded
+start training
+28. Feb 21:49:36, Step 0, Accuracy = 0.480, Loss = 2.226
+28. Feb 21:50:09, Step 20, Accuracy = 0.482, Loss = 2.230
+28. Feb 21:50:46, Step 40, Accuracy = 0.481, Loss = 2.229
+28. Feb 21:51:19, Step 60, Accuracy = 0.482, Loss = 2.228
+28. Feb 21:51:55, Step 80, Accuracy = 0.478, Loss = 2.242
+28. Feb 21:52:28, Step 100, Accuracy = 0.480, Loss = 2.225
+28. Feb 21:55:26, Step 4000, Accuracy = 0.486, Loss = 2.222
+28. Feb 21:58:20, Step 8000, Accuracy = 0.487, Loss = 2.209
+28. Feb 22:01:15, Step 12000, Accuracy = 0.496, Loss = 2.199
+28. Feb 22:03:54, Step 16000, Accuracy = 0.502, Loss = 2.193
+28. Feb 22:06:29, Step 20000, Accuracy = 0.496, Loss = 2.196
+28. Feb 22:09:01, Step 24000, Accuracy = 0.484, Loss = 2.222
+28. Feb 22:11:30, Step 28000, Accuracy = 0.500, Loss = 2.192
+28. Feb 22:13:56, Step 32000, Accuracy = 0.498, Loss = 2.156
+28. Feb 22:16:19, Step 36000, Accuracy = 0.501, Loss = 2.162
+28. Feb 22:18:41, Step 40000, Accuracy = 0.504, Loss = 2.167
+28. Feb 22:20:56, Step 44000, Accuracy = 0.508, Loss = 2.155
+problem loading cached matchs
+Traceback (most recent call last):
+  File "run_training.py", line 100, in <module>
+    features, label = fetch_planes(move, feature_path, label_path)
+  File "/home/hlynur/convothello/supervised/training_utils.py", line 216, in fetch_planes
+    features = board_to_input(board, player, previous_moves)
+NameError: global name 'board' is not defined
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 466.44MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x2d94930
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 534.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x2d98720
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 534.50MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+locked and loaded
+start training
+Traceback (most recent call last):
+  File "run_training.py", line 101, in <module>
+    if not feature or not label:
+NameError: name 'feature' is not defined
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 466.44MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x2fd0630
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 534.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x2fd4420
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 534.50MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+locked and loaded
+start training
+Traceback (most recent call last):
+  File "run_training.py", line 101, in <module>
+    if not features or not label:
+ValueError: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 466.44MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x28a81b0
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 534.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x28abfa0
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 534.50MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+run_training.py:101: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if features == "Error" or label == "Error":
+locked and loaded
+start training
+28. Feb 22:36:50, Step 0, Accuracy = 0.509, Loss = 2.155
+28. Feb 22:37:26, Step 20, Accuracy = 0.508, Loss = 2.146
+28. Feb 22:38:00, Step 40, Accuracy = 0.504, Loss = 2.145
+28. Feb 22:38:37, Step 60, Accuracy = 0.510, Loss = 2.145
+28. Feb 22:39:11, Step 80, Accuracy = 0.511, Loss = 2.143
+28. Feb 22:39:47, Step 100, Accuracy = 0.511, Loss = 2.146
+28. Feb 22:42:01, Step 4000, Accuracy = 0.504, Loss = 2.134
+28. Feb 22:44:17, Step 8000, Accuracy = 0.505, Loss = 2.131
+28. Feb 22:46:40, Step 12000, Accuracy = 0.508, Loss = 2.114
+28. Feb 22:48:53, Step 16000, Accuracy = 0.515, Loss = 2.101
+28. Feb 22:51:10, Step 20000, Accuracy = 0.518, Loss = 2.097
+28. Feb 22:53:29, Step 24000, Accuracy = 0.510, Loss = 2.178
+28. Feb 22:55:49, Step 28000, Accuracy = 0.520, Loss = 2.102
+28. Feb 22:58:08, Step 32000, Accuracy = 0.514, Loss = 2.114
+28. Feb 23:00:26, Step 36000, Accuracy = 0.524, Loss = 2.087
+28. Feb 23:02:43, Step 40000, Accuracy = 0.520, Loss = 2.131
+28. Feb 23:05:00, Step 44000, Accuracy = 0.524, Loss = 2.105
+28. Feb 23:07:19, Step 48000, Accuracy = 0.515, Loss = 2.177
+28. Feb 23:09:35, Step 52000, Accuracy = 0.516, Loss = 2.090
+28. Feb 23:11:50, Step 56000, Accuracy = 0.512, Loss = 2.195
+28. Feb 23:14:06, Step 60000, Accuracy = 0.523, Loss = 2.082
+28. Feb 23:16:25, Step 64000, Accuracy = 0.522, Loss = 2.070
+28. Feb 23:18:43, Step 68000, Accuracy = 0.519, Loss = 2.084
+28. Feb 23:21:00, Step 72000, Accuracy = 0.522, Loss = 2.059
+28. Feb 23:23:19, Step 76000, Accuracy = 0.513, Loss = 2.074
+28. Feb 23:25:34, Step 80000, Accuracy = 0.524, Loss = 2.071
+28. Feb 23:27:51, Step 84000, Accuracy = 0.526, Loss = 2.067
+28. Feb 23:30:10, Step 88000, Accuracy = 0.527, Loss = 2.037
+28. Feb 23:32:26, Step 92000, Accuracy = 0.528, Loss = 2.178
+28. Feb 23:34:43, Step 96000, Accuracy = 0.526, Loss = 2.061
+28. Feb 23:37:02, Step 100000, Accuracy = 0.529, Loss = 2.032
+28. Feb 23:39:14, Step 104000, Accuracy = 0.526, Loss = 2.030
+28. Feb 23:41:18, Step 108000, Accuracy = 0.526, Loss = 2.056
+28. Feb 23:43:14, Step 112000, Accuracy = 0.533, Loss = 2.037
+28. Feb 23:45:13, Step 116000, Accuracy = 0.538, Loss = 2.034
+28. Feb 23:46:12, Step 0, Accuracy = 0.539, Loss = 2.021
+28. Feb 23:46:47, Step 20, Accuracy = 0.539, Loss = 2.023
+28. Feb 23:47:20, Step 40, Accuracy = 0.538, Loss = 2.024
+28. Feb 23:47:57, Step 60, Accuracy = 0.535, Loss = 2.026
+28. Feb 23:48:29, Step 80, Accuracy = 0.538, Loss = 2.020
+28. Feb 23:49:05, Step 100, Accuracy = 0.539, Loss = 2.023
+28. Feb 23:51:12, Step 4000, Accuracy = 0.532, Loss = 2.034
+28. Feb 23:53:24, Step 8000, Accuracy = 0.526, Loss = 2.027
+28. Feb 23:55:42, Step 12000, Accuracy = 0.532, Loss = 2.016
+28. Feb 23:57:55, Step 16000, Accuracy = 0.538, Loss = 2.021
+01. Mar 00:00:08, Step 20000, Accuracy = 0.535, Loss = 2.030
+01. Mar 00:02:24, Step 24000, Accuracy = 0.523, Loss = 2.092
+01. Mar 00:04:38, Step 28000, Accuracy = 0.535, Loss = 2.041
+01. Mar 00:06:51, Step 32000, Accuracy = 0.529, Loss = 2.039
+01. Mar 00:09:05, Step 36000, Accuracy = 0.536, Loss = 2.010
+01. Mar 00:11:21, Step 40000, Accuracy = 0.534, Loss = 2.056
+01. Mar 00:13:37, Step 44000, Accuracy = 0.532, Loss = 2.019
+01. Mar 00:16:00, Step 48000, Accuracy = 0.533, Loss = 2.105
+01. Mar 00:18:17, Step 52000, Accuracy = 0.546, Loss = 1.999
+01. Mar 00:20:35, Step 56000, Accuracy = 0.533, Loss = 2.213
+01. Mar 00:22:50, Step 60000, Accuracy = 0.541, Loss = 1.993
+01. Mar 00:25:05, Step 64000, Accuracy = 0.551, Loss = 1.992
+01. Mar 00:27:22, Step 68000, Accuracy = 0.533, Loss = 2.024
+01. Mar 00:29:38, Step 72000, Accuracy = 0.543, Loss = 1.992
+01. Mar 00:31:54, Step 76000, Accuracy = 0.530, Loss = 2.001
+01. Mar 00:34:09, Step 80000, Accuracy = 0.532, Loss = 2.012
+01. Mar 00:36:23, Step 84000, Accuracy = 0.541, Loss = 1.990
+01. Mar 00:38:42, Step 88000, Accuracy = 0.537, Loss = 1.991
+01. Mar 00:40:53, Step 92000, Accuracy = 0.535, Loss = 2.126
+01. Mar 00:43:09, Step 96000, Accuracy = 0.535, Loss = 2.016
+01. Mar 00:45:25, Step 100000, Accuracy = 0.546, Loss = 1.976
+01. Mar 00:47:40, Step 104000, Accuracy = 0.537, Loss = 1.971
+01. Mar 00:49:53, Step 108000, Accuracy = 0.544, Loss = 1.998
+01. Mar 00:52:08, Step 112000, Accuracy = 0.551, Loss = 1.969
+01. Mar 00:54:20, Step 116000, Accuracy = 0.546, Loss = 1.973
+01. Mar 00:55:23, Step 0, Accuracy = 0.534, Loss = 1.978
+01. Mar 00:55:56, Step 20, Accuracy = 0.532, Loss = 1.993
+01. Mar 00:56:32, Step 40, Accuracy = 0.540, Loss = 1.981
+01. Mar 00:57:08, Step 60, Accuracy = 0.540, Loss = 1.977
+01. Mar 00:57:42, Step 80, Accuracy = 0.542, Loss = 1.974
+01. Mar 00:58:17, Step 100, Accuracy = 0.535, Loss = 1.973
+01. Mar 01:00:26, Step 4000, Accuracy = 0.538, Loss = 1.969
+01. Mar 01:02:36, Step 8000, Accuracy = 0.542, Loss = 1.973
+01. Mar 01:04:55, Step 12000, Accuracy = 0.543, Loss = 1.974
+01. Mar 01:07:09, Step 16000, Accuracy = 0.552, Loss = 1.969
+01. Mar 01:09:25, Step 20000, Accuracy = 0.553, Loss = 1.963
+01. Mar 01:11:38, Step 24000, Accuracy = 0.538, Loss = 2.098
+01. Mar 01:13:51, Step 28000, Accuracy = 0.538, Loss = 2.001
+01. Mar 01:16:06, Step 32000, Accuracy = 0.544, Loss = 1.976
+01. Mar 01:18:21, Step 36000, Accuracy = 0.543, Loss = 1.974
+01. Mar 01:20:36, Step 40000, Accuracy = 0.539, Loss = 2.023
+01. Mar 01:22:53, Step 44000, Accuracy = 0.543, Loss = 1.961
+01. Mar 01:25:07, Step 48000, Accuracy = 0.537, Loss = 2.089
+01. Mar 01:27:21, Step 52000, Accuracy = 0.540, Loss = 1.973
+01. Mar 01:29:36, Step 56000, Accuracy = 0.528, Loss = 2.210
+01. Mar 01:31:52, Step 60000, Accuracy = 0.539, Loss = 1.958
+01. Mar 01:34:08, Step 64000, Accuracy = 0.548, Loss = 1.966
+01. Mar 01:36:26, Step 68000, Accuracy = 0.543, Loss = 1.968
+01. Mar 01:38:43, Step 72000, Accuracy = 0.543, Loss = 1.950
+01. Mar 01:40:58, Step 76000, Accuracy = 0.545, Loss = 1.956
+01. Mar 01:43:12, Step 80000, Accuracy = 0.537, Loss = 1.996
+01. Mar 01:45:31, Step 84000, Accuracy = 0.543, Loss = 1.961
+01. Mar 01:47:49, Step 88000, Accuracy = 0.545, Loss = 1.952
+01. Mar 01:50:05, Step 92000, Accuracy = 0.542, Loss = 2.175
+01. Mar 01:52:17, Step 96000, Accuracy = 0.536, Loss = 1.975
+01. Mar 01:54:29, Step 100000, Accuracy = 0.552, Loss = 1.947
+01. Mar 01:56:44, Step 104000, Accuracy = 0.554, Loss = 1.933
+01. Mar 01:58:57, Step 108000, Accuracy = 0.550, Loss = 1.956
+01. Mar 02:01:07, Step 112000, Accuracy = 0.552, Loss = 1.933
+01. Mar 02:03:19, Step 116000, Accuracy = 0.549, Loss = 1.940
+01. Mar 02:04:24, Step 0, Accuracy = 0.551, Loss = 1.945
+01. Mar 02:05:01, Step 20, Accuracy = 0.550, Loss = 1.942
+01. Mar 02:05:33, Step 40, Accuracy = 0.550, Loss = 1.948
+01. Mar 02:06:08, Step 60, Accuracy = 0.546, Loss = 1.963
+01. Mar 02:06:41, Step 80, Accuracy = 0.544, Loss = 1.953
+01. Mar 02:07:17, Step 100, Accuracy = 0.549, Loss = 1.941
+01. Mar 02:09:30, Step 4000, Accuracy = 0.549, Loss = 1.935
+01. Mar 02:11:48, Step 8000, Accuracy = 0.547, Loss = 1.939
+01. Mar 02:14:15, Step 12000, Accuracy = 0.553, Loss = 1.933
+01. Mar 02:16:44, Step 16000, Accuracy = 0.555, Loss = 1.933
+01. Mar 02:19:13, Step 20000, Accuracy = 0.557, Loss = 1.927
+01. Mar 02:21:42, Step 24000, Accuracy = 0.540, Loss = 2.110
+01. Mar 02:24:10, Step 28000, Accuracy = 0.557, Loss = 1.963
+01. Mar 02:26:40, Step 32000, Accuracy = 0.555, Loss = 1.939
+01. Mar 02:29:06, Step 36000, Accuracy = 0.553, Loss = 1.938
+01. Mar 02:31:32, Step 40000, Accuracy = 0.553, Loss = 2.001
+01. Mar 02:34:00, Step 44000, Accuracy = 0.557, Loss = 1.938
+01. Mar 02:36:28, Step 48000, Accuracy = 0.547, Loss = 2.086
+01. Mar 02:38:52, Step 52000, Accuracy = 0.547, Loss = 1.927
+01. Mar 02:41:17, Step 56000, Accuracy = 0.551, Loss = 2.209
+01. Mar 02:43:36, Step 60000, Accuracy = 0.556, Loss = 1.929
+01. Mar 02:46:00, Step 64000, Accuracy = 0.553, Loss = 1.932
+01. Mar 02:48:21, Step 68000, Accuracy = 0.552, Loss = 1.944
+01. Mar 02:50:43, Step 72000, Accuracy = 0.563, Loss = 1.915
+01. Mar 02:53:00, Step 76000, Accuracy = 0.557, Loss = 1.935
+01. Mar 02:55:17, Step 80000, Accuracy = 0.555, Loss = 1.973
+01. Mar 02:57:36, Step 84000, Accuracy = 0.571, Loss = 1.922
+01. Mar 02:59:55, Step 88000, Accuracy = 0.558, Loss = 1.922
+01. Mar 03:02:16, Step 92000, Accuracy = 0.562, Loss = 2.116
+01. Mar 03:04:37, Step 96000, Accuracy = 0.547, Loss = 1.938
+01. Mar 03:06:53, Step 100000, Accuracy = 0.557, Loss = 1.920
+01. Mar 03:09:08, Step 104000, Accuracy = 0.559, Loss = 1.918
+01. Mar 03:11:23, Step 108000, Accuracy = 0.558, Loss = 1.955
+01. Mar 03:13:38, Step 112000, Accuracy = 0.563, Loss = 1.905
+01. Mar 03:15:54, Step 116000, Accuracy = 0.561, Loss = 1.908
+01. Mar 03:16:56, Step 0, Accuracy = 0.560, Loss = 1.911
+01. Mar 03:17:29, Step 20, Accuracy = 0.562, Loss = 1.908
+01. Mar 03:18:03, Step 40, Accuracy = 0.562, Loss = 1.905
+01. Mar 03:18:38, Step 60, Accuracy = 0.557, Loss = 1.909
+01. Mar 03:19:09, Step 80, Accuracy = 0.562, Loss = 1.915
+01. Mar 03:19:46, Step 100, Accuracy = 0.564, Loss = 1.910
+01. Mar 03:22:03, Step 4000, Accuracy = 0.558, Loss = 1.939
+01. Mar 03:24:17, Step 8000, Accuracy = 0.562, Loss = 1.905
+01. Mar 03:26:42, Step 12000, Accuracy = 0.558, Loss = 1.916
+01. Mar 03:29:01, Step 16000, Accuracy = 0.569, Loss = 1.902
+01. Mar 03:31:13, Step 20000, Accuracy = 0.561, Loss = 1.909
+01. Mar 03:33:28, Step 24000, Accuracy = 0.556, Loss = 2.017
+01. Mar 03:35:46, Step 28000, Accuracy = 0.562, Loss = 1.938
+01. Mar 03:38:02, Step 32000, Accuracy = 0.558, Loss = 1.919
+01. Mar 03:40:15, Step 36000, Accuracy = 0.559, Loss = 1.902
+01. Mar 03:42:29, Step 40000, Accuracy = 0.552, Loss = 2.005
+01. Mar 03:44:46, Step 44000, Accuracy = 0.565, Loss = 1.910
+01. Mar 03:46:58, Step 48000, Accuracy = 0.558, Loss = 2.028
+01. Mar 03:49:16, Step 52000, Accuracy = 0.560, Loss = 1.911
+01. Mar 03:51:32, Step 56000, Accuracy = 0.550, Loss = 2.221
+01. Mar 03:53:51, Step 60000, Accuracy = 0.559, Loss = 1.912
+01. Mar 03:56:17, Step 64000, Accuracy = 0.562, Loss = 1.888
+01. Mar 03:58:59, Step 68000, Accuracy = 0.557, Loss = 1.925
+01. Mar 04:01:47, Step 72000, Accuracy = 0.556, Loss = 1.893
+01. Mar 04:04:41, Step 76000, Accuracy = 0.564, Loss = 1.901
+01. Mar 04:07:29, Step 80000, Accuracy = 0.558, Loss = 1.929
+01. Mar 04:10:17, Step 84000, Accuracy = 0.569, Loss = 1.884
+01. Mar 04:13:00, Step 88000, Accuracy = 0.562, Loss = 1.920
+01. Mar 04:15:48, Step 92000, Accuracy = 0.561, Loss = 2.111
+01. Mar 04:18:37, Step 96000, Accuracy = 0.550, Loss = 1.908
+01. Mar 04:21:20, Step 100000, Accuracy = 0.564, Loss = 1.903
+01. Mar 04:24:01, Step 104000, Accuracy = 0.569, Loss = 1.891
+01. Mar 04:26:40, Step 108000, Accuracy = 0.562, Loss = 1.916
+01. Mar 04:29:20, Step 112000, Accuracy = 0.568, Loss = 1.890
+01. Mar 04:32:49, Step 116000, Accuracy = 0.561, Loss = 1.893
+01. Mar 04:34:26, Step 0, Accuracy = 0.567, Loss = 1.885
+01. Mar 04:34:59, Step 20, Accuracy = 0.564, Loss = 1.890
+01. Mar 04:35:36, Step 40, Accuracy = 0.564, Loss = 1.893
+01. Mar 04:36:05, Step 60, Accuracy = 0.560, Loss = 1.901
+01. Mar 04:36:42, Step 80, Accuracy = 0.561, Loss = 1.898
+01. Mar 04:37:15, Step 100, Accuracy = 0.566, Loss = 1.899
+01. Mar 04:41:48, Step 4000, Accuracy = 0.564, Loss = 1.888
+01. Mar 04:46:23, Step 8000, Accuracy = 0.566, Loss = 1.895
+01. Mar 04:51:07, Step 12000, Accuracy = 0.561, Loss = 1.897
+01. Mar 04:55:11, Step 16000, Accuracy = 0.569, Loss = 1.891
+01. Mar 04:59:10, Step 20000, Accuracy = 0.567, Loss = 1.878
+01. Mar 05:03:10, Step 24000, Accuracy = 0.564, Loss = 2.022
+01. Mar 05:07:03, Step 28000, Accuracy = 0.569, Loss = 1.926
+01. Mar 05:10:44, Step 32000, Accuracy = 0.564, Loss = 1.899
+01. Mar 05:14:21, Step 36000, Accuracy = 0.571, Loss = 1.891
+01. Mar 05:17:48, Step 40000, Accuracy = 0.561, Loss = 1.956
+01. Mar 05:21:02, Step 44000, Accuracy = 0.574, Loss = 1.886
+01. Mar 05:24:16, Step 48000, Accuracy = 0.570, Loss = 2.016
+01. Mar 05:27:22, Step 52000, Accuracy = 0.565, Loss = 1.888
+01. Mar 05:30:26, Step 56000, Accuracy = 0.564, Loss = 2.236
+01. Mar 05:33:25, Step 60000, Accuracy = 0.558, Loss = 1.909
+01. Mar 05:36:20, Step 64000, Accuracy = 0.579, Loss = 1.879
+01. Mar 05:39:10, Step 68000, Accuracy = 0.570, Loss = 1.902
+01. Mar 05:41:58, Step 72000, Accuracy = 0.577, Loss = 1.881
+01. Mar 05:44:42, Step 76000, Accuracy = 0.569, Loss = 1.905
+01. Mar 05:47:16, Step 80000, Accuracy = 0.561, Loss = 1.915
+01. Mar 05:49:56, Step 84000, Accuracy = 0.578, Loss = 1.877
+01. Mar 05:52:32, Step 88000, Accuracy = 0.567, Loss = 1.887
+01. Mar 05:55:04, Step 92000, Accuracy = 0.564, Loss = 2.095
+01. Mar 05:57:33, Step 96000, Accuracy = 0.566, Loss = 1.899
+01. Mar 06:00:02, Step 100000, Accuracy = 0.565, Loss = 1.897
+01. Mar 06:02:30, Step 104000, Accuracy = 0.572, Loss = 1.882
+01. Mar 06:04:55, Step 108000, Accuracy = 0.571, Loss = 1.967
+01. Mar 06:07:22, Step 112000, Accuracy = 0.572, Loss = 1.889
+01. Mar 06:09:41, Step 116000, Accuracy = 0.564, Loss = 1.883
+01. Mar 06:10:49, Step 0, Accuracy = 0.571, Loss = 1.880
+01. Mar 06:11:27, Step 20, Accuracy = 0.573, Loss = 1.879
+01. Mar 06:12:03, Step 40, Accuracy = 0.571, Loss = 1.876
+01. Mar 06:12:34, Step 60, Accuracy = 0.571, Loss = 1.907
+01. Mar 06:13:13, Step 80, Accuracy = 0.576, Loss = 1.890
+01. Mar 06:13:47, Step 100, Accuracy = 0.575, Loss = 1.883
+01. Mar 06:16:06, Step 4000, Accuracy = 0.577, Loss = 1.870
+01. Mar 06:18:28, Step 8000, Accuracy = 0.565, Loss = 1.885
+01. Mar 06:20:56, Step 12000, Accuracy = 0.565, Loss = 1.882
+01. Mar 06:23:12, Step 16000, Accuracy = 0.577, Loss = 1.865
+01. Mar 06:25:31, Step 20000, Accuracy = 0.580, Loss = 1.872
+01. Mar 06:27:46, Step 24000, Accuracy = 0.554, Loss = 1.998
+01. Mar 06:30:05, Step 28000, Accuracy = 0.567, Loss = 1.905
+01. Mar 06:32:15, Step 32000, Accuracy = 0.562, Loss = 1.889
+01. Mar 06:34:31, Step 36000, Accuracy = 0.572, Loss = 1.878
+01. Mar 06:36:46, Step 40000, Accuracy = 0.565, Loss = 1.928
+01. Mar 06:39:01, Step 44000, Accuracy = 0.574, Loss = 1.873
+01. Mar 06:41:15, Step 48000, Accuracy = 0.555, Loss = 2.057
+01. Mar 06:43:29, Step 52000, Accuracy = 0.562, Loss = 1.888
+01. Mar 06:45:43, Step 56000, Accuracy = 0.561, Loss = 2.182
+01. Mar 06:47:52, Step 60000, Accuracy = 0.568, Loss = 1.880
+01. Mar 06:50:05, Step 64000, Accuracy = 0.574, Loss = 1.866
+01. Mar 06:52:16, Step 68000, Accuracy = 0.569, Loss = 1.882
+01. Mar 06:54:27, Step 72000, Accuracy = 0.579, Loss = 1.858
+01. Mar 06:56:40, Step 76000, Accuracy = 0.579, Loss = 1.870
+01. Mar 06:58:53, Step 80000, Accuracy = 0.571, Loss = 1.883
+01. Mar 07:01:02, Step 84000, Accuracy = 0.579, Loss = 1.868
+01. Mar 07:03:09, Step 88000, Accuracy = 0.572, Loss = 1.865
+01. Mar 07:05:18, Step 92000, Accuracy = 0.567, Loss = 2.052
+01. Mar 07:07:33, Step 96000, Accuracy = 0.570, Loss = 1.876
+01. Mar 07:09:47, Step 100000, Accuracy = 0.566, Loss = 1.869
+01. Mar 07:11:55, Step 104000, Accuracy = 0.573, Loss = 1.861
+01. Mar 07:14:10, Step 108000, Accuracy = 0.568, Loss = 1.882
+01. Mar 07:16:25, Step 112000, Accuracy = 0.576, Loss = 1.865
+01. Mar 07:18:36, Step 116000, Accuracy = 0.571, Loss = 1.860
+01. Mar 07:19:37, Step 0, Accuracy = 0.575, Loss = 1.864
+01. Mar 07:20:09, Step 20, Accuracy = 0.572, Loss = 1.862
+01. Mar 07:20:44, Step 40, Accuracy = 0.572, Loss = 1.862
+01. Mar 07:21:16, Step 60, Accuracy = 0.569, Loss = 1.873
+01. Mar 07:21:49, Step 80, Accuracy = 0.570, Loss = 1.869
+01. Mar 07:22:26, Step 100, Accuracy = 0.568, Loss = 1.876
+01. Mar 07:24:35, Step 4000, Accuracy = 0.570, Loss = 1.868
+01. Mar 07:26:47, Step 8000, Accuracy = 0.571, Loss = 1.870
+01. Mar 07:29:11, Step 12000, Accuracy = 0.571, Loss = 1.875
+01. Mar 07:31:20, Step 16000, Accuracy = 0.580, Loss = 1.860
+01. Mar 07:33:36, Step 20000, Accuracy = 0.575, Loss = 1.861
+01. Mar 07:35:45, Step 24000, Accuracy = 0.559, Loss = 2.070
+01. Mar 07:37:58, Step 28000, Accuracy = 0.577, Loss = 1.868
+01. Mar 07:40:11, Step 32000, Accuracy = 0.572, Loss = 1.886
+01. Mar 07:42:21, Step 36000, Accuracy = 0.568, Loss = 1.857
+01. Mar 07:44:34, Step 40000, Accuracy = 0.566, Loss = 1.945
+01. Mar 07:46:48, Step 44000, Accuracy = 0.580, Loss = 1.867
+01. Mar 07:48:56, Step 48000, Accuracy = 0.567, Loss = 1.995
+01. Mar 07:51:13, Step 52000, Accuracy = 0.567, Loss = 1.871
+01. Mar 07:53:24, Step 56000, Accuracy = 0.556, Loss = 2.208
+01. Mar 07:55:38, Step 60000, Accuracy = 0.572, Loss = 1.859
+01. Mar 07:57:47, Step 64000, Accuracy = 0.576, Loss = 1.862
+01. Mar 07:59:59, Step 68000, Accuracy = 0.572, Loss = 1.886
+01. Mar 08:02:16, Step 72000, Accuracy = 0.574, Loss = 1.862
+01. Mar 08:04:23, Step 76000, Accuracy = 0.567, Loss = 1.860
+01. MaI tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 466.44MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x32f0430
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 534.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x32f4220
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 534.50MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+run_training.py:101: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if features == "Error" or label == "Error":
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 466.44MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x32ee570
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 534.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x32f2390
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 534.50MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+run_training.py:101: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if features == "Error" or label == "Error":
+locked and loaded
+start training
+01. Mar 11:54:30, Step 0, Accuracy = 0.581, Loss = 1.824
+01. Mar 11:55:44, Step 20, Accuracy = 0.579, Loss = 1.825
+01. Mar 12:00:59, Step 12000, Accuracy = 0.581, Loss = 1.829
+01. Mar 12:05:51, Step 24000, Accuracy = 0.579, Loss = 1.832
+01. Mar 12:10:14, Step 36000, Accuracy = 0.585, Loss = 1.826
+problem loading cached matchs
+01. Mar 12:14:46, Step 48000, Accuracy = 0.576, Loss = 1.874
+01. Mar 12:19:12, Step 60000, Accuracy = 0.578, Loss = 1.826
+01. Mar 12:23:34, Step 72000, Accuracy = 0.583, Loss = 1.821
+01. Mar 12:27:42, Step 84000, Accuracy = 0.576, Loss = 1.828
+01. Mar 12:32:08, Step 96000, Accuracy = 0.569, Loss = 1.837
+01. Mar 12:36:16, Step 108000, Accuracy = 0.578, Loss = 1.864
+01. Mar 12:39:54, Step 0, Accuracy = 0.586, Loss = 1.820
+01. Mar 12:40:59, Step 20, Accuracy = 0.585, Loss = 1.819
+01. Mar 12:45:32, Step 12000, Accuracy = 0.581, Loss = 1.830
+01. Mar 12:49:34, Step 24000, Accuracy = 0.583, Loss = 1.826
+01. Mar 12:53:30, Step 36000, Accuracy = 0.577, Loss = 1.830
+01. Mar 12:57:35, Step 48000, Accuracy = 0.576, Loss = 1.844
+01. Mar 13:01:37, Step 60000, Accuracy = 0.577, Loss = 1.824
+01. Mar 13:05:30, Step 72000, Accuracy = 0.581, Loss = 1.822
+01. Mar 13:09:31, Step 84000, Accuracy = 0.579, Loss = 1.826
+01. Mar 13:13:57, Step 96000, Accuracy = 0.570, Loss = 1.833
+01. Mar 13:18:21, Step 108000, Accuracy = 0.579, Loss = 1.850
+01. Mar 13:21:55, Step 0, Accuracy = 0.579, Loss = 1.829
+01. Mar 13:22:58, Step 20, Accuracy = 0.579, Loss = 1.829
+01. Mar 13:27:30, Step 12000, Accuracy = 0.582, Loss = 1.827
+01. Mar 13:31:45, Step 24000, Accuracy = 0.581, Loss = 1.826
+01. Mar 13:35:54, Step 36000, Accuracy = 0.584, Loss = 1.820
+01. Mar 13:39:50, Step 48000, Accuracy = 0.581, Loss = 1.837
+01. Mar 13:43:49, Step 60000, Accuracy = 0.578, Loss = 1.823
+01. Mar 13:47:52, Step 72000, Accuracy = 0.584, Loss = 1.818
+01. Mar 13:51:47, Step 84000, Accuracy = 0.584, Loss = 1.817
+01. Mar 13:55:57, Step 96000, Accuracy = 0.573, Loss = 1.832
+01. Mar 14:00:07, Step 108000, Accuracy = 0.582, Loss = 1.834
+01. Mar 14:03:20, Step 0, Accuracy = 0.585, Loss = 1.820
+01. Mar 14:04:41, Step 20, Accuracy = 0.585, Loss = 1.823
+01. Mar 14:08:58, Step 12000, Accuracy = 0.583, Loss = 1.819
+01. Mar 14:13:07, Step 24000, Accuracy = 0.583, Loss = 1.823
+01. Mar 14:17:00, Step 36000, Accuracy = 0.579, Loss = 1.816
+problem loading cached matchs
+01. Mar 14:20:59, Step 48000, Accuracy = 0.580, Loss = 1.845
+01. Mar 14:24:55, Step 60000, Accuracy = 0.583, Loss = 1.822
+01. Mar 14:29:00, Step 72000, Accuracy = 0.588, Loss = 1.815
+01. Mar 14:33:04, Step 84000, Accuracy = 0.581, Loss = 1.819
+01. Mar 14:36:57, Step 96000, Accuracy = 0.571, Loss = 1.830
+01. Mar 14:40:51, Step 108000, Accuracy = 0.580, Loss = 1.872
+01. Mar 14:44:08, Step 0, Accuracy = 0.586, Loss = 1.822
+01. Mar 14:45:11, Step 20, Accuracy = 0.587, Loss = 1.819
+01. Mar 14:49:26, Step 12000, Accuracy = 0.580, Loss = 1.819
+01. Mar 14:53:12, Step 24000, Accuracy = 0.583, Loss = 1.820
+01. Mar 14:57:14, Step 36000, Accuracy = 0.580, Loss = 1.814
+01. Mar 15:01:29, Step 48000, Accuracy = 0.581, Loss = 1.829
+01. Mar 15:05:25, Step 60000, Accuracy = 0.585, Loss = 1.820
+01. Mar 15:09:20, Step 72000, Accuracy = 0.587, Loss = 1.813
+01. Mar 15:13:17, Step 84000, Accuracy = 0.583, Loss = 1.817
+01. Mar 15:17:11, Step 96000, Accuracy = 0.575, Loss = 1.832
+01. Mar 15:21:13, Step 108000, Accuracy = 0.580, Loss = 1.868
+01. Mar 15:24:22, Step 0, Accuracy = 0.586, Loss = 1.824
+01. Mar 15:25:17, Step 20, Accuracy = 0.586, Loss = 1.824
+01. Mar 15:29:09, Step 12000, Accuracy = 0.584, Loss = 1.823
+01. Mar 15:32:59, Step 24000, Accuracy = 0.580, Loss = 1.817
+01. Mar 15:37:06, Step 36000, Accuracy = 0.576, Loss = 1.818
+01. Mar 15:40:54, Step 48000, Accuracy = 0.581, Loss = 1.853
+01. Mar 15:44:56, Step 60000, Accuracy = 0.586, Loss = 1.815
+01. Mar 15:48:44, Step 72000, Accuracy = 0.585, Loss = 1.810
+01. Mar 15:52:37, Step 84000, Accuracy = 0.587, Loss = 1.815
+01. Mar 15:56:39, Step 96000, Accuracy = 0.569, Loss = 1.829
+01. Mar 16:00:25, Step 108000, Accuracy = 0.580, Loss = 1.844
+01. Mar 16:03:38, Step 0, Accuracy = 0.582, Loss = 1.816
+01. Mar 16:04:40, Step 20, Accuracy = 0.581, Loss = 1.815
+01. Mar 16:08:49, Step 12000, Accuracy = 0.582, Loss = 1.823
+01. Mar 16:12:54, Step 24000, Accuracy = 0.580, Loss = 1.822
+01. Mar 16:16:39, Step 36000, Accuracy = 0.583, Loss = 1.815
+01. Mar 16:20:27, Step 48000, Accuracy = 0.580, Loss = 1.892
+01. Mar 16:24:23, Step 60000, Accuracy = 0.581, Loss = 1.818
+01. Mar 16:28:22, Step 72000, Accuracy = 0.587, Loss = 1.815
+01. Mar 16:32:17, Step 84000, Accuracy = 0.586, Loss = 1.812
+01. Mar 16:36:02, Step 96000, Accuracy = 0.572, Loss = 1.825
+01. Mar 16:39:56, Step 108000, Accuracy = 0.584, Loss = 1.834
+01. Mar 16:43:04, Step 0, Accuracy = 0.583, Loss = 1.816
+01. Mar 16:43:58, Step 20, Accuracy = 0.584, Loss = 1.813
+01. Mar 16:47:47, Step 12000, Accuracy = 0.583, Loss = 1.822
+01. Mar 16:51:34, Step 24000, Accuracy = 0.582, Loss = 1.830
+01. Mar 16:55:29, Step 36000, Accuracy = 0.582, Loss = 1.809
+01. Mar 16:59:14, Step 48000, Accuracy = 0.579, Loss = 1.842
+01. Mar 17:03:09, Step 60000, Accuracy = 0.577, Loss = 1.822
+01. Mar 17:06:59, Step 72000, Accuracy = 0.583, Loss = 1.818
+01. Mar 17:10:58, Step 84000, Accuracy = 0.586, Loss = 1.817
+01. Mar 17:15:09, Step 96000, Accuracy = 0.569, Loss = 1.832
+01. Mar 17:18:57, Step 108000, Accuracy = 0.582, Loss = 1.843
+01. Mar 17:22:20, Step 0, Accuracy = 0.585, Loss = 1.815
+01. Mar 17:23:29, Step 20, Accuracy = 0.586, Loss = 1.815
+01. Mar 17:27:33, Step 12000, Accuracy = 0.583, Loss = 1.820
+01. Mar 17:31:20, Step 24000, Accuracy = 0.584, Loss = 1.815
+01. Mar 17:35:20, Step 36000, Accuracy = 0.587, Loss = 1.815
+01. Mar 17:39:12, Step 48000, Accuracy = 0.581, Loss = 1.837
+01. Mar 17:43:15, Step 60000, Accuracy = 0.580, Loss = 1.821
+01. Mar 17:47:03, Step 72000, Accuracy = 0.589, Loss = 1.810
+01. Mar 17:50:52, Step 84000, Accuracy = 0.588, Loss = 1.804
+01. Mar 17:54:46, Step 96000, Accuracy = 0.574, Loss = 1.821
+01. Mar 17:58:39, Step 108000, Accuracy = 0.580, Loss = 1.813
+01. Mar 18:01:58, Step 0, Accuracy = 0.580, Loss = 1.824
+01. Mar 18:03:08, Step 20, Accuracy = 0.578, Loss = 1.822
+01. Mar 18:07:03, Step 12000, Accuracy = 0.577, Loss = 1.817
+01. Mar 18:10:59, Step 24000, Accuracy = 0.584, Loss = 1.814
+01. Mar 18:15:11, Step 36000, Accuracy = 0.582, Loss = 1.816
+01. Mar 18:19:09, Step 48000, Accuracy = 0.580, Loss = 1.877
+01. Mar 18:23:02, Step 60000, Accuracy = 0.581, Loss = 1.812
+01. Mar 18:26:59, Step 72000, Accuracy = 0.581, Loss = 1.810
+01. Mar 18:30:53, Step 84000, Accuracy = 0.587, Loss = 1.808
+01. Mar 18:35:00, Step 96000, Accuracy = 0.573, Loss = 1.824
+01. Mar 18:39:01, Step 108000, Accuracy = 0.585, Loss = 1.828
+01. Mar 18:42:25, Step 0, Accuracy = 0.576, Loss = 1.822
+01. Mar 18:43:40, Step 20, Accuracy = 0.581, Loss = 1.821
+01. Mar 18:47:46, Step 12000, Accuracy = 0.589, Loss = 1.809
+01. Mar 18:51:39, Step 24000, Accuracy = 0.585, Loss = 1.817
+01. Mar 18:55:47, Step 36000, Accuracy = 0.583, Loss = 1.809
+01. Mar 18:59:53, Step 48000, Accuracy = 0.579, Loss = 1.835
+01. Mar 19:03:47, Step 60000, Accuracy = 0.584, Loss = 1.807
+01. Mar 19:07:41, Step 72000, Accuracy = 0.589, Loss = 1.808
+01. Mar 19:11:26, Step 84000, Accuracy = 0.589, Loss = 1.809
+01. Mar 19:15:17, Step 96000, Accuracy = 0.571, Loss = 1.819
+01. Mar 19:19:22, Step 108000, Accuracy = 0.584, Loss = 1.856
+01. Mar 19:22:38, Step 0, Accuracy = 0.577, Loss = 1.820
+01. Mar 19:23:38, Step 20, Accuracy = 0.579, Loss = 1.817
+01. Mar 19:27:33, Step 12000, Accuracy = 0.589, Loss = 1.809
+01. Mar 19:31:31, Step 24000, Accuracy = 0.584, Loss = 1.815
+01. Mar 19:35:25, Step 36000, Accuracy = 0.582, Loss = 1.806
+01. Mar 19:39:38, Step 48000, Accuracy = 0.580, Loss = 1.835
+01. Mar 19:43:32, Step 60000, Accuracy = 0.586, Loss = 1.809
+01. Mar 19:47:22, Step 72000, Accuracy = 0.586, Loss = 1.804
+01. Mar 19:51:17, Step 84000, Accuracy = 0.586, Loss = 1.807
+01. Mar 19:55:11, Step 96000, Accuracy = 0.577, Loss = 1.820
+01. Mar 19:59:08, Step 108000, Accuracy = 0.580, Loss = 1.826
+01. Mar 20:02:21, Step 0, Accuracy = 0.573, Loss = 1.816
+01. Mar 20:03:22, Step 20, Accuracy = 0.575, Loss = 1.815
+01. I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 466.44MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x275b640
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 534.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x275f430
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 534.50MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+run_training.py:101: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if features == "Error" or label == "Error":
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 466.44MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x39d17a0
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 534.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x39d55c0
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 534.50MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+run_training.py:101: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if features == "Error" or label == "Error":
+locked and loaded
+start training
+01. Mar 22:25:15, Step 0, Accuracy = 0.582, Loss = 1.818
+01. Mar 22:26:20, Step 100, Accuracy = 0.583, Loss = 1.813
+01. Mar 22:29:37, Step 12000, Accuracy = 0.585, Loss = 1.805
+01. Mar 22:32:46, Step 24000, Accuracy = 0.590, Loss = 1.804
+01. Mar 22:35:57, Step 36000, Accuracy = 0.589, Loss = 1.796
+01. Mar 22:39:08, Step 48000, Accuracy = 0.590, Loss = 1.799
+01. Mar 22:42:16, Step 60000, Accuracy = 0.588, Loss = 1.802
+01. Mar 22:45:29, Step 72000, Accuracy = 0.588, Loss = 1.794
+01. Mar 22:48:42, Step 84000, Accuracy = 0.588, Loss = 1.793
+01. Mar 22:51:53, Step 96000, Accuracy = 0.586, Loss = 1.808
+01. Mar 22:55:08, Step 108000, Accuracy = 0.587, Loss = 1.808
+01. Mar 22:57:52, Step 0, Accuracy = 0.590, Loss = 1.800
+01. Mar 22:58:59, Step 100, Accuracy = 0.588, Loss = 1.800
+01. Mar 23:02:17, Step 12000, Accuracy = 0.591, Loss = 1.798
+01. Mar 23:05:32, Step 24000, Accuracy = 0.586, Loss = 1.798
+01. Mar 23:08:43, Step 36000, Accuracy = 0.589, Loss = 1.793
+01. Mar 23:11:57, Step 48000, Accuracy = 0.592, Loss = 1.797
+01. Mar 23:15:14, Step 60000, Accuracy = 0.585, Loss = 1.797
+01. Mar 23:18:31, Step 72000, Accuracy = 0.592, Loss = 1.792
+01. Mar 23:21:47, Step 84000, Accuracy = 0.591, Loss = 1.793
+01. Mar 23:24:57, Step 96000, Accuracy = 0.583, Loss = 1.804
+01. Mar 23:28:11, Step 108000, Accuracy = 0.590, Loss = 1.807
+01. Mar 23:30:57, Step 0, Accuracy = 0.588, Loss = 1.796
+01. Mar 23:32:00, Step 100, Accuracy = 0.587, Loss = 1.796
+01. Mar 23:35:19, Step 12000, Accuracy = 0.587, Loss = 1.798
+01. Mar 23:38:34, Step 24000, Accuracy = 0.584, Loss = 1.801
+01. Mar 23:41:46, Step 36000, Accuracy = 0.583, Loss = 1.795
+01. Mar 23:44:59, Step 48000, Accuracy = 0.583, Loss = 1.805
+01. Mar 23:48:13, Step 60000, Accuracy = 0.586, Loss = 1.799
+01. Mar 23:51:25, Step 72000, Accuracy = 0.592, Loss = 1.794
+01. Mar 23:54:37, Step 84000, Accuracy = 0.587, Loss = 1.795
+01. Mar 23:57:49, Step 96000, Accuracy = 0.581, Loss = 1.804
+02. Mar 00:01:02, Step 108000, Accuracy = 0.584, Loss = 1.812
+02. Mar 00:03:49, Step 0, Accuracy = 0.589, Loss = 1.798
+02. Mar 00:04:57, Step 100, Accuracy = 0.589, Loss = 1.798
+02. Mar 00:08:17, Step 12000, Accuracy = 0.591, Loss = 1.796
+02. Mar 00:11:30, Step 24000, Accuracy = 0.586, Loss = 1.801
+02. Mar 00:14:43, Step 36000, Accuracy = 0.589, Loss = 1.791
+02. Mar 00:17:54, Step 48000, Accuracy = 0.589, Loss = 1.800
+02. Mar 00:21:08, Step 60000, Accuracy = 0.589, Loss = 1.796
+02. Mar 00:24:22, Step 72000, Accuracy = 0.589, Loss = 1.794
+02. Mar 00:27:38, Step 84000, Accuracy = 0.590, Loss = 1.790
+02. Mar 00:30:50, Step 96000, Accuracy = 0.585, Loss = 1.798
+02. Mar 00:34:05, Step 108000, Accuracy = 0.587, Loss = 1.806
+02. Mar 00:36:51, Step 0, Accuracy = 0.593, Loss = 1.793
+02. Mar 00:37:56, Step 100, Accuracy = 0.592, Loss = 1.794
+02. Mar 00:41:11, Step 12000, Accuracy = 0.590, Loss = 1.794
+02. Mar 00:44:21, Step 24000, Accuracy = 0.587, Loss = 1.800
+02. Mar 00:47:32, Step 36000, Accuracy = 0.587, Loss = 1.793
+02. Mar 00:50:42, Step 48000, Accuracy = 0.591, Loss = 1.795
+02. Mar 00:53:58, Step 60000, Accuracy = 0.585, Loss = 1.799
+02. Mar 00:57:16, Step 72000, Accuracy = 0.590, Loss = 1.792
+02. Mar 01:00:35, Step 84000, Accuracy = 0.588, Loss = 1.790
+02. Mar 01:03:47, Step 96000, Accuracy = 0.584, Loss = 1.802
+02. Mar 01:06:57, Step 108000, Accuracy = 0.589, Loss = 1.813
+02. Mar 01:09:35, Step 0, Accuracy = 0.591, Loss = 1.792
+02. Mar 01:10:42, Step 100, Accuracy = 0.591, Loss = 1.793
+02. Mar 01:14:04, Step 12000, Accuracy = 0.592, Loss = 1.794
+02. Mar 01:17:12, Step 24000, Accuracy = 0.588, Loss = 1.796
+02. Mar 01:20:27, Step 36000, Accuracy = 0.588, Loss = 1.788
+02. Mar 01:23:37, Step 48000, Accuracy = 0.588, Loss = 1.792
+02. Mar 01:26:50, Step 60000, Accuracy = 0.586, Loss = 1.795
+02. Mar 01:30:02, Step 72000, Accuracy = 0.591, Loss = 1.791
+02. Mar 01:33:15, Step 84000, Accuracy = 0.591, Loss = 1.790
+02. Mar 01:36:30, Step 96000, Accuracy = 0.588, Loss = 1.798
+02. Mar 01:39:39, Step 108000, Accuracy = 0.587, Loss = 1.801
+02. Mar 01:42:28, Step 0, Accuracy = 0.592, Loss = 1.796
+02. Mar 01:43:33, Step 100, Accuracy = 0.591, Loss = 1.798
+02. Mar 01:46:49, Step 12000, Accuracy = 0.593, Loss = 1.790
+02. Mar 01:50:03, Step 24000, Accuracy = 0.590, Loss = 1.800
+02. Mar 01:53:18, Step 36000, Accuracy = 0.591, Loss = 1.789
+02. Mar 01:56:32, Step 48000, Accuracy = 0.591, Loss = 1.793
+02. Mar 01:59:48, Step 60000, Accuracy = 0.590, Loss = 1.795
+02. Mar 02:03:00, Step 72000, Accuracy = 0.589, Loss = 1.789
+02. Mar 02:06:13, Step 84000, Accuracy = 0.590, Loss = 1.789
+02. Mar 02:09:28, Step 96000, Accuracy = 0.587, Loss = 1.799
+02. Mar 02:12:37, Step 108000, Accuracy = 0.585, Loss = 1.805
+02. Mar 02:15:24, Step 0, Accuracy = 0.595, Loss = 1.790
+02. Mar 02:16:31, Step 100, Accuracy = 0.594, Loss = 1.791
+02. Mar 02:19:49, Step 12000, Accuracy = 0.592, Loss = 1.791
+02. Mar 02:23:02, Step 24000, Accuracy = 0.589, Loss = 1.801
+02. Mar 02:26:17, Step 36000, Accuracy = 0.590, Loss = 1.787
+02. Mar 02:29:27, Step 48000, Accuracy = 0.588, Loss = 1.798
+02. Mar 02:32:39, Step 60000, Accuracy = 0.585, Loss = 1.792
+02. Mar 02:35:55, Step 72000, Accuracy = 0.589, Loss = 1.793
+02. Mar 02:39:05, Step 84000, Accuracy = 0.590, Loss = 1.788
+02. Mar 02:42:17, Step 96000, Accuracy = 0.585, Loss = 1.796
+02. Mar 02:45:32, Step 108000, Accuracy = 0.586, Loss = 1.801
+02. Mar 02:48:17, Step 0, Accuracy = 0.589, Loss = 1.789
+02. Mar 02:49:26, Step 100, Accuracy = 0.590, Loss = 1.791
+02. Mar 02:52:40, Step 12000, Accuracy = 0.591, Loss = 1.789
+02. Mar 02:55:51, Step 24000, Accuracy = 0.591, Loss = 1.797
+02. Mar 02:59:02, Step 36000, Accuracy = 0.589, Loss = 1.787
+02. Mar 03:02:13, Step 48000, Accuracy = 0.594, Loss = 1.792
+02. Mar 03:05:24, Step 60000, Accuracy = 0.592, Loss = 1.791
+02. Mar 03:08:38, Step 72000, Accuracy = 0.587, Loss = 1.788
+02. Mar 03:11:49, Step 84000, Accuracy = 0.591, Loss = 1.787
+02. Mar 03:15:02, Step 96000, Accuracy = 0.587, Loss = 1.796
+02. Mar 03:18:10, Step 108000, Accuracy = 0.590, Loss = 1.798
+02. Mar 03:20:53, Step 0, Accuracy = 0.589, Loss = 1.791
+02. Mar 03:21:56, Step 100, Accuracy = 0.590, Loss = 1.791
+02. Mar 03:25:14, Step 12000, Accuracy = 0.592, Loss = 1.794
+02. Mar 03:28:29, Step 24000, Accuracy = 0.586, Loss = 1.803
+02. Mar 03:31:39, Step 36000, Accuracy = 0.588, Loss = 1.789
+02. Mar 03:34:48, Step 48000, Accuracy = 0.590, Loss = 1.794
+02. Mar 03:38:00, Step 60000, Accuracy = 0.591, Loss = 1.789
+02. Mar 03:41:09, Step 72000, Accuracy = 0.595, Loss = 1.786
+02. Mar 03:44:23, Step 84000, Accuracy = 0.592, Loss = 1.785
+02. Mar 03:47:37, Step 96000, Accuracy = 0.585, Loss = 1.799
+02. Mar 03:50:40, Step 108000, Accuracy = 0.586, Loss = 1.805
+02. Mar 03:53:27, Step 0, Accuracy = 0.591, Loss = 1.791
+02. Mar 03:54:34, Step 100, Accuracy = 0.590, Loss = 1.793
+02. Mar 03:57:52, Step 12000, Accuracy = 0.588, Loss = 1.793
+02. Mar 04:01:05, Step 24000, Accuracy = 0.590, Loss = 1.793
+02. Mar 04:04:15, Step 36000, Accuracy = 0.588, Loss = 1.791
+02. Mar 04:07:30, Step 48000, Accuracy = 0.591, Loss = 1.792
+02. Mar 04:10:40, Step 60000, Accuracy = 0.590, Loss = 1.790
+02. Mar 04:13:50, Step 72000, Accuracy = 0.592, Loss = 1.788
+02. Mar 04:17:07, Step 84000, Accuracy = 0.595, Loss = 1.785
+02. Mar 04:20:17, Step 96000, Accuracy = 0.587, Loss = 1.799
+02. Mar 04:23:25, Step 108000, Accuracy = 0.586, Loss = 1.801
+02. Mar 04:26:02, Step 0, Accuracy = 0.586, Loss = 1.789
+02. Mar 04:27:06, Step 100, Accuracy = 0.586, Loss = 1.790
+02. Mar 04:30:23, Step 12000, Accuracy = 0.591, Loss = 1.786
+02. Mar 04:33:37, Step 24000, Accuracy = 0.591, Loss = 1.802
+02. Mar 04:36:55, Step 36000, Accuracy = 0.587, Loss = 1.787
+02. Mar 04:40:08, Step 48000, Accuracy = 0.588, Loss = 1.795
+02. Mar 04:43:22, Step 60000, Accuracy = 0.587, Loss = 1.793
+02. Mar 04:46:36, Step 72000, Accuracy = 0.589, Loss = 1.783
+02. Mar 04:49:44, Step 84000, Accuracy = 0.589, Loss = 1.785
+02. Mar 04:52:58, Step 96000, Accuracy = 0.589, Loss = 1.795
+02. Mar 04:56:05, Step 108000, Accuracy = 0.589, Loss = 1.804
+02. Mar 04:58:47, Step 0, Accuracy = 0.590, Loss = 1.791
+02. Mar 04:59:54, Step 100, Accuracy = 0.590, Loss = 1.792
+02. Mar 05:03:08, Step 12000, Accuracy = 0.590, Loss = 1.787
+02. Mar 05:06:14, Step 24000, Accuracy = 0.589, Loss = 1.794
+02. Mar 05:09:26, Step 36000, Accuracy = 0.588, Loss = 1.786
+02. Mar 05:12:43, Step 48000, Accuracy = 0.590, Loss = 1.797
+02. Mar 05:15:53, Step 60000, Accuracy = 0.586, Loss = 1.790
+02. Mar 05:19:05, Step 72000, Accuracy = 0.588, Loss = 1.788
+02. Mar 05:22:15, Step 84000, Accuracy = 0.589, Loss = 1.784
+02. Mar 05:25:30, Step 96000, Accuracy = 0.588, Loss = 1.796
+02. Mar 05:28:41, Step 108000, Accuracy = 0.589, Loss = 1.805
+02. Mar 05:31:25, Step 0, Accuracy = 0.591, Loss = 1.790
+02. Mar 05:32:33, Step 100, Accuracy = 0.590, Loss = 1.793
+02. Mar 05:35:46, Step 12000, Accuracy = 0.590, Loss = 1.785
+02. Mar 05:38:59, Step 24000, Accuracy = 0.591, Loss = 1.794
+02. Mar 05:42:10, Step 36000, Accuracy = 0.590, Loss = 1.784
+02. Mar 05:45:21, Step 48000, Accuracy = 0.591, Loss = 1.789
+02. Mar 05:48:31, Step 60000, Accuracy = 0.587, Loss = 1.790
+02. Mar 05:51:45, Step 72000, Accuracy = 0.591, Loss = 1.784
+02. Mar 05:54:55, Step 84000, Accuracy = 0.590, Loss = 1.783
+02. Mar 05:58:09, Step 96000, Accuracy = 0.587, Loss = 1.795
+02. Mar 06:01:16, Step 108000, Accuracy = 0.594, Loss = 1.802
+02. Mar 06:04:04, Step 0, Accuracy = 0.591, Loss = 1.786
+02. Mar 06:05:06, Step 100, Accuracy = 0.591, Loss = 1.786
+02. Mar 06:08:29, Step 12000, Accuracy = 0.593, Loss = 1.783
+02. Mar 06:11:40, Step 24000, Accuracy = 0.590, Loss = 1.790
+02. Mar 06:14:53, Step 36000, Accuracy = 0.592, Loss = 1.784
+02. Mar 06:18:04, Step 48000, Accuracy = 0.589, Loss = 1.789
+02. Mar 06:21:16, Step 60000, Accuracy = 0.589, Loss = 1.787
+02. Mar 06:24:23, Step 72000, Accuracy = 0.591, Loss = 1.784
+02. Mar 06:27:35, Step 84000, Accuracy = 0.593, Loss = 1.785
+02. Mar 06:30:46, Step 96000, Accuracy = 0.586, Loss = 1.789
+02. Mar 06:34:01, Step 108000, Accuracy = 0.590, Loss = 1.805
+02. Mar 06:36:42, Step 0, Accuracy = 0.591, Loss = 1.787
+02. Mar 06:37:51, Step 100, Accuracy = 0.591, Loss = 1.788
+02. Mar 06:41:04, Step 12000, Accuracy = 0.588, Loss = 1.787
+02. Mar 06:44:15, Step 24000, Accuracy = 0.590, Loss = 1.792
+02. Mar 06:47:27, Step 36000, Accuracy = 0.593, Loss = 1.784
+02. Mar 06:50:33, Step 48000, Accuracy = 0.593, Loss = 1.789
+02. Mar 06:53:44, Step 60000, Accuracy = 0.589, Loss = 1.790
+02. Mar 06:56:56, Step 72000, Accuracy = 0.589, Loss = 1.787
+02. Mar 07:00:11, Step 84000, Accuracy = 0.590, Loss = 1.785
+02. Mar 07:03:19, Step 96000, Accuracy = 0.590, Loss = 1.795
+02. Mar 07:06:31, Step 108000, Accuracy = 0.590, Loss = 1.809
+02. Mar 07:09:15, Step 0, Accuracy = 0.592, Loss = 1.785
+02. Mar 07:10:23, Step 100, Accuracy = 0.592, Loss = 1.787
+02. Mar 07:13:39, Step 12000, Accuracy = 0.590, Loss = 1.788
+02. Mar 07:16:49, Step 24000, Accuracy = 0.587, Loss = 1.795
+02. Mar 07:20:00, Step 36000, Accuracy = 0.590, Loss = 1.781
+02. Mar 07:23:09, Step 48000, Accuracy = 0.589, Loss = 1.787
+02. Mar 07:26:18, Step 60000, Accuracy = 0.592, Loss = 1.787
+02. Mar 07:29:31, Step 72000, Accuracy = 0.591, Loss = 1.784
+02. Mar 07:32:43, Step 84000, Accuracy = 0.593, Loss = 1.782
+02. Mar 07:35:51, Step 96000, Accuracy = 0.585, Loss = 1.796
+02. Mar 07:38:58, Step 108000, Accuracy = 0.589, Loss = 1.810
+02. Mar 07:41:36, Step 0, Accuracy = 0.589, Loss = 1.794
+02. Mar 07:42:40, Step 100, Accuracy = 0.589, Loss = 1.794
+02. Mar 07:45:54, Step 12000, Accuracy = 0.591, Loss = 1.784
+02. Mar 07:49:06, Step 24000, Accuracy = 0.588, Loss = 1.794
+02. Mar 07:52:19, Step 36000, Accuracy = 0.592, Loss = 1.783
+02. Mar 07:55:32, Step 48000, Accuracy = 0.591, Loss = 1.790
+02. Mar 07:59:35, Step 60000, Accuracy = 0.590, Loss = 1.784
+02. Mar 08:03:08, Step 72000, Accuracy = 0.593, Loss = 1.784
+02. Mar 08:06:21, Step 84000, Accuracy = 0.592, Loss = 1.782
+02. Mar 08:09:30, Step 96000, Accuracy = 0.589, Loss = 1.789
+02. Mar 08:12:41, Step 108000, Accuracy = 0.590, Loss = 1.801
+02. Mar 08:15:21, Step 0, Accuracy = 0.591, Loss = 1.781
+02. Mar 08:16:29, Step 100, Accuracy = 0.589, Loss = 1.781
+02. Mar 08:19:38, Step 12000, Accuracy = 0.589, Loss = 1.789
+02. Mar 08:22:48, Step 24000, Accuracy = 0.591, Loss = 1.793
+02. Mar 08:25:59, Step 36000,I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 466.44MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x24c14b0
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 534.38MiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x24c52d0
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 534.50MiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+run_training.py:101: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if features == "Error" or label == "Error":
+  File "run_training.py", line 92
+    if i > 36000 and i < 42000 or i > 45000 and i < 48000 or i > 93000 and i < 96000 or i > 99000 and i < 102000 or i  105000 and i < 108000:
+                                                                                                                            ^
+SyntaxError: invalid syntax
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x3a8d230
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x3a91020
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+run_training.py:104: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if features == "Error" or label == "Error":
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x31a0350
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x31a4170
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+run_training.py:104: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if features == "Error" or label == "Error":
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x28d3ff0
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x28d7e10
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+run_training.py:104: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if features == "Error" or label == "Error":
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x43910c0
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x4394ee0
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+run_training.py:104: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if features == "Error" or label == "Error":
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x2a9fd90
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x2aa3b80
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+run_training.py:104: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if features == "Error" or label == "Error":
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcublas.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcudnn.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcufft.so locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcuda.so.1 locally
+I tensorflow/stream_executor/dso_loader.cc:128] successfully opened CUDA library libcurand.so locally
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 0 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:03:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x260d230
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 1 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:04:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+W tensorflow/stream_executor/cuda/cuda_driver.cc:590] creating context when one is currently active; existing: 0x2611050
+I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:937] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:885] Found device 2 with properties: 
+name: Tesla K40c
+major: 3 minor: 5 memoryClockRate (GHz) 0.8755
+pciBusID 0000:82:00.0
+Total memory: 11.92GiB
+Free memory: 11.85GiB
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 0 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 1 and 2
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 0
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:777] Peer access not supported between device ordinals 2 and 1
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:906] DMA: 0 1 2 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 0:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 1:   Y Y N 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:916] 2:   N N Y 
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla K40c, pci bus id: 0000:03:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:1) -> (device: 1, name: Tesla K40c, pci bus id: 0000:04:00.0)
+I tensorflow/core/common_runtime/gpu/gpu_device.cc:975] Creating TensorFlow device (/gpu:2) -> (device: 2, name: Tesla K40c, pci bus id: 0000:82:00.0)
+run_training.py:105: FutureWarning: elementwise comparison failed; returning scalar instead, but in the future will perform elementwise comparison
+  if features == "Error" or label == "Error":
